@@ -26,7 +26,7 @@ function svgSprites() {
     svgSprite({
       mode: {
         stack: {
-          sprite: '../sprite.svg',
+          sprite: 'images/sprite.svg',
         },
       },
     })
