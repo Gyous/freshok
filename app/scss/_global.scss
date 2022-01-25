@@ -1,0 +1,213 @@
+body,
+html{
+  height: 100%;
+}
+
+main{
+  flex-grow: 1;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: $white;
+  color: $dark900;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn,
+.btn--green,
+.catalog__list,
+.header__link,
+.header__link svg,
+.menu__link,
+.catalog__item,
+.catalog__item::before,
+.catalog__link,
+.catalog__btn,
+.catalog__btn::after,
+.user__navigation-link,
+.user__navigation-link svg,
+.logo,
+.slick-arrow,
+.slick-arrow__svg,
+.cards__link,
+.cards__img,
+.footer__link,
+.social__link,
+.products__card-heart,
+.products__card-heart svg,
+.filters__btn {
+  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s, opacity 0.3s, fill 0.3s;
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 400;
+  color: $white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background-color: $green900;
+  letter-spacing: 0.03em;
+}
+
+.btn:hover {
+  background-color: #4D810C;
+}
+
+.btn:focus,
+.filters__btn:focus {
+  box-shadow: 0 0 0 4px #E0EDCF;
+}
+
+.btn:active {
+  color: rgba($white, 0.5);
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn--green {
+  background-color: transparent;
+  color: $green900;
+  border: 1px solid $green900;
+}
+
+.btn--green:hover {
+  background-color: $green100;
+}
+
+.btn--green:focus {
+  box-shadow: 0 0 0 4px rgba(99, 166, 14, 0.5);
+  color: $green900;
+}
+
+.btn--green:active {
+  box-shadow: inset 0 10px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+.btn--black{
+  padding: 15px 52px;
+  background-color: $dark800;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn--black:hover{
+  background-color: rgba($dark800, 0.75);
+}
+
+.btn--black:focus{
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn--black:active{
+  background-color: $dark800;
+}
+
+.section{
+  padding: 72px 0;
+}
+
+.section-title{
+  @extend %ruda-600;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.filters{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  &__item:not(:last-child){
+    margin-right: 26px;
+  }
+  &__btn{
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: $dark500;
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    border-radius: 3px;
+    &::before{
+      @extend %absolute-pseudo;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+    &:hover{
+      color: #63A60E;
+    }
+    &:focus{
+      color: $dark500;
+      &::before{
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.mixitup-control-active{
+  &::before{
+    background-color: $green200;
+  }
+}
+
+.badge--new,
+.badge--discount,
+.badge--hit{
+  text-transform: uppercase;
+  padding: 3px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 6px;
+  color: $white;
+  line-height: 1;
+}
+
+.badge--new{
+  background-color: $green900;
+}
+
+.badge--discount{
+  background-color: $red;
+}
+
+.badge--hit{
+  background-color: $orange;
+}
+
+.heart__img{
+  fill: $silver600;
+  height: 39px;
+  width: 44px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

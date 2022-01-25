@@ -1,0 +1,38 @@
+$white: #ffffff;
+$silver100: #F6F6F6;
+$silver600: #C1C1C1;
+$dark500: #505050;
+$dark800: #31352B;
+$dark900: #121212;
+$green100: #EFF6E7;
+$green200: #E0EDCF;
+$green900: #63A60F;
+$yellow: #FFB800;
+$orange: #FF7A00;
+$red: #CF3E3B;
+
+%flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+%absolute-pseudo{
+  content: "";
+  position: absolute;
+}
+
+%absolute-top-trasform{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%background-image{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+%ruda-600{
+  font-family: 'Ruda', sans-serif;
+  font-weight: 600;
+}
