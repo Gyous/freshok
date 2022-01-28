@@ -1,0 +1,142 @@
+.footer {
+  background-color: $dark800;
+  padding: 30px 0 24px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 400;
+
+  &__logo {
+    margin-bottom: 23px;
+  }
+
+  &__top {
+    @extend %flex-between;
+    padding-bottom: 30px
+  }
+
+  &__btn {
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 12px 16px;
+  }
+
+  &__navigation {
+    column-count: 3;
+    column-gap: 75px;
+    column-width: 130px;
+  }
+
+  &__item {
+    margin-bottom: 19px;
+  }
+
+  &__link {
+    border-radius: 3px;
+    line-height: 1;
+
+    &:hover,
+    &:focus {
+      color: $green900;
+    }
+  }
+
+  &__address {
+    max-width: 215px;
+    width: 100%;
+  }
+
+  &__phone,
+  &__location {
+    border-radius: 3px;
+    margin-bottom: 19px;
+    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s;
+  }
+
+  &__bottom {
+    padding-top: 19px;
+    border-top: 1px solid rgba($white, 0.1);
+  }
+
+  &__copy {
+    @extend %flex-between;
+    align-items: center;
+  }
+
+  &__author {
+    text-transform: uppercase;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 306px;
+  width: 100%;
+  margin-right: 70px;
+
+  &__label {
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__field {
+    width: 181px;
+    border-radius: 6px 0 0 6px;
+    background-color: $white;
+    padding: 12px 13px 12px 12px;
+    color: #4F4F4F;
+
+    &::placeholder {
+      transition: color 0.3s;
+    }
+
+    &:hover::placeholder {
+      color: $dark1000;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    @extend %background-image;
+    border-radius: 3px;
+    width: 32px;
+    height: 32px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(299deg) brightness(102%) contrast(102%);
+  }
+}
+
+.cards {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    border-radius: 3px;
+  }
+
+  &__img {
+    width: 93px;
+    height: 29px;
+    fill: $white;
+  }
+
+  &__img--small {
+    width: 49px;
+  }
+}

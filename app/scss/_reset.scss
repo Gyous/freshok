@@ -57,12 +57,10 @@ button {
   cursor: pointer;
   display: inline-block;
   appearance: none;
-  padding: 0;
-  border: 0;
+  background-color: transparent;
 }
 
-a,
-button {
+a {
   outline: transparent;
 }
 
