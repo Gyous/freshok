@@ -20,5 +20,13 @@ $(function () {
     prevArrow: '<button class="slick-prev"><svg class="slick-arrow__svg slick-prev--svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
     nextArrow: '<button class="slick-next"><svg class="slick-arrow__svg slick-next--svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>'
   });
-  let mixer = mixitup('.products__items');
+  var containerMix1 = document.querySelector('[data-ref="mixProducts"]');
+  var containerMix2 = document.querySelector('[data-ref="mixStocks"]');
+  var config = {
+    controls:{
+      scope: 'local'
+    }
+  };
+  let mixer1 = mixitup('.products', config);
+  let mixer2 = mixitup('.stocks', config);
 });

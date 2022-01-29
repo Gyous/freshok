@@ -7,15 +7,6 @@ body {
   color: $dark900;
 }
 
-.logo {
-  flex-shrink: 0;
-  border-radius: 3px;
-
-  &__img {
-    object-fit: cover;
-  }
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -28,37 +19,20 @@ body {
   padding: 0 15px;
 }
 
-.btn,
-.btn--green,
-.catalog__list,
-.header__link,
-.menu__link,
-.catalog__item,
-.catalog__item::before,
-.catalog__link,
-.catalog__btn,
-.catalog__btn::after,
-.navigation__link,
-.navigation__link svg,
-.logo,
-.slick-arrow,
-.slick-arrow__svg,
-.cards__link,
-.cards__img,
-.footer__link,
-.socials__link,
-.products__card-heart,
-.products__card-heart svg,
-.filters__btn {
-  transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s, opacity 0.3s, fill 0.3s;
+.logo {
+  border-radius: 3px;
+  @extend %transition;
+  &__img {
+    object-fit: cover;
+  }
 }
 
 .header__link:hover,
 .menu__link:hover,
-.cards__link:hover,
 .socials__link:hover,
 .footer__phone:hover,
-.footer__location:hover {
+.footer__location:hover,
+.cards__link:hover {
   opacity: 0.7;
 }
 
@@ -66,20 +40,19 @@ body {
 .menu__link:focus,
 .navigation__link:focus,
 .logo:focus,
-.cards__link:focus,
 .socials__link:focus,
 .footer__link:focus,
 .footer__phone:focus,
-.footer__location:focus {
-  box-shadow: 0 0 0 3px $green100;
+.footer__location:focus,
+.cards__link:focus,
+.products-card__favourite:focus {
+  box-shadow: 0 0 0 3px $white100;
 }
 
-.header__link:active,
 .menu__link:active,
-.cards__link:active,
-.socials__link:active,
 .footer__phone:active,
-.footer__location:active {
+.footer__location:active,
+.cards__link:active {
   color: $green200;
   opacity: 1;
   & svg {
@@ -96,8 +69,9 @@ body {
   border-radius: 6px;
   background-color: $green900;
   letter-spacing: 0.03em;
+  @extend %transition;
   &:hover{
-    background-color: #4D810C;
+    background-color: $green100;
   }
   &:active{
     color: rgba($white, 0.5);
@@ -114,6 +88,7 @@ body {
   background-color: transparent;
   color: $green900;
   border: 1px solid $green900;
+  @extend %transition;
   &:hover{
     background-color: $green100;
   }
@@ -134,6 +109,7 @@ body {
   text-transform: uppercase;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  @extend %transition;
   &:hover{
     background-color: rgba($dark800, 0.75);
   }
@@ -154,79 +130,7 @@ body {
   font-size: 32px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.filters {
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 26px;
-    }
-  }
-
-  &__btn {
-    position: relative;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    color: $dark500;
-    text-transform: uppercase;
-    padding-bottom: 2px;
-    border-radius: 3px;
-
-    &::before {
-      @extend %absolute-pseudo;
-      bottom: 0;
-      width: 100%;
-      height: 3px;
-      background-color: transparent;
-      transition: background-color 0.3s;
-    }
-
-    &:hover {
-      color: $green400;
-    }
-
-    &:focus {
-      color: $dark500;
-
-      &::before {
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-.mixitup-control-active {
-  &::before {
-    background-color: $green200;
-  }
-}
-
-.badge--new,
-.badge--discount,
-.badge--hit {
-  text-transform: uppercase;
-  padding: 3px 6px;
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 6px;
-  color: $white;
-  line-height: 1;
-}
-
-.badge--new {
-  background-color: $green900;
-}
-
-.badge--discount {
-  background-color: $red700;
-}
-
-.badge--hit {
-  background-color: $orange900;
+  margin-bottom: 30px;
 }
 
 .sr-only {

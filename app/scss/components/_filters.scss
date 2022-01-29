@@ -1,0 +1,49 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: $dark500;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    @extend %transition;
+
+    &::before {
+      @extend %absolute-pseudo;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+      color: $green400;
+    }
+
+    &:focus {
+      color: $dark500;
+
+      &::before {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.mixitup-control-active {
+  &::before {
+    background-color: $green200;
+  }
+}
