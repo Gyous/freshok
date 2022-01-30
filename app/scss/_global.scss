@@ -25,6 +25,9 @@ body {
   &__img {
     object-fit: cover;
   }
+  &:hover{
+    opacity: 0.65;
+  }
 }
 
 .header__link:hover,
@@ -45,7 +48,8 @@ body {
 .footer__phone:focus,
 .footer__location:focus,
 .cards__link:focus,
-.products-card__favourite:focus {
+.products-card__favourite:focus,
+.news__link--all:focus {
   box-shadow: 0 0 0 3px $white100;
 }
 
