@@ -1,6 +1,39 @@
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin r($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
 %flex-between {
   display: flex;
   justify-content: space-between;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 %absolute-pseudo {
@@ -24,6 +57,6 @@
   font-weight: 600;
 }
 
-%transition{
+%transition {
   transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s, opacity 0.3s, fill 0.3s, filter 0.3s;
 }

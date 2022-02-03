@@ -1,0 +1,104 @@
+.banners {
+  text-transform: uppercase;
+  padding-top: 0;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+    @extend %background-image;
+    max-width: 300px;
+    padding: 76px 34px;
+    color: $dark500;
+    border-radius: 4px;
+
+    &--big {
+      color: $white;
+      grid-column-start: span 2;
+      max-width: 630px;
+      width: 100%;
+
+      .banners__inner {
+        max-width: 350px;
+      }
+
+      .banners__subtitle {
+        text-shadow: 1px 1px 0 rgba($black, 0.25);
+      }
+
+      .banners__title {
+        text-shadow: 2px 2px 0 rgba($black, 0.25);
+      }
+
+      .banners__link {
+        text-shadow: 1px 1px 0 rgba($black, 0.25);
+
+        &::after {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    @extend %flex-column;
+    max-width: 190px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  &__title {
+    @extend %ruda-600;
+    font-size: 30px;
+    margin-bottom: 12px;
+    @include line-clamp(3);
+  }
+
+  &__link {
+    position: relative;
+    margin-top: auto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    padding-bottom: 7px;
+    align-self: flex-start;
+    border-radius: 3px;
+    @extend %transition;
+
+    &::after {
+      @extend %absolute-pseudo;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $dark500;
+      left: 0;
+      transition: background-color 0.3s;
+    }
+
+    &:hover {
+      color: $green900;
+
+      &::after {
+        background-color: $green900;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+      color: inherit;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+}

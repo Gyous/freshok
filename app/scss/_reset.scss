@@ -12,6 +12,7 @@ a {
   text-decoration: none;
   color: inherit;
   display: block;
+  outline: transparent;
 }
 
 ul,
@@ -51,16 +52,12 @@ select {
   background-color: transparent;
   outline: transparent;
   border: none;
+  appearance: none;
 }
 
 button {
   cursor: pointer;
   display: inline-block;
-  appearance: none;
-}
-
-a {
-  outline: transparent;
 }
 
 address,
@@ -68,6 +65,6 @@ cite {
   font-style: normal;
 }
 
-svg{
+svg {
   fill: #fff;
 }

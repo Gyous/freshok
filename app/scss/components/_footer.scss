@@ -1,9 +1,8 @@
 .footer {
   background-color: $dark800;
-  padding: 30px 0 24px;
+  padding: 32px 0 24px;
   color: $white;
   font-size: 14px;
-  font-weight: 400;
 
   &__logo {
     margin-bottom: 23px;
@@ -43,6 +42,10 @@
     &:focus {
       color: $green900;
     }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+    }
   }
 
   &__address {
@@ -50,11 +53,19 @@
     width: 100%;
   }
 
-  &__phone,
-  &__location {
+  &__data {
     border-radius: 3px;
     margin-bottom: 19px;
     transition: box-shadow 0.3s, color 0.3s, opacity 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $green900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+    }
   }
 
   &__bottom {
@@ -62,26 +73,25 @@
     border-top: 1px solid rgba($white, 0.1);
   }
 
-  &__copy {
+  &__wrapper {
     @extend %flex-between;
     align-items: center;
   }
 
-  &__author {
+  &__copy {
     text-transform: uppercase;
   }
 }
 
 .subscribe-form {
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
   max-width: 306px;
   width: 100%;
   margin-right: 70px;
 
   &__label {
     line-height: 1;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   &__inner {
@@ -89,7 +99,7 @@
   }
 
   &__field {
-    width: 181px;
+    max-width: 181px;
     border-radius: 6px 0 0 6px;
     background-color: $white;
     padding: 12px 13px 12px 12px;
@@ -100,30 +110,7 @@
     }
 
     &:hover::placeholder {
-      color: $dark1000;
-    }
-  }
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-
-  &__item:not(:last-child) {
-    margin-right: 12px;
-  }
-
-  &__link {
-    @extend %background-image;
-    @extend %transition;
-    object-fit: cover;
-    border-radius: 3px;
-    width: 32px;
-    height: 32px;
-    &:active{
-      box-shadow: none;
-      opacity: 1;
-      filter: invert(20%) sepia(80%) saturate(100%) hue-rotate(41deg) brightness(104%) contrast(86%);
+      color: $green400;
     }
   }
 }
@@ -137,21 +124,27 @@
 
   &__link {
     border-radius: 3px;
+    width: 93px;
+    height: 30px;
     @extend %transition;
-    &:active{
+    @extend %background-image;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+    }
+
+    &:active {
       box-shadow: none;
       opacity: 1;
       filter: invert(20%) sepia(80%) saturate(100%) hue-rotate(41deg) brightness(104%) contrast(86%);
     }
-  }
 
-  &__img {
-    width: 93px;
-    height: 29px;
-    @extend %transition;
-  }
-
-  &__img--small {
-    width: 49px;
+    &--small {
+      width: 49px;
+    }
   }
 }

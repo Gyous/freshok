@@ -1,29 +1,32 @@
 .benefits {
   background-color: $silver100;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: center;
     padding: 48px 0 29px;
   }
-  &__item{
-    font-weight: 600;
+
+  &__item {
+    @extend %background-image;
     max-width: 265px;
     width: 100%;
     padding-left: 76px;
-    @extend %background-image;
     background-size: auto;
     background-position: left top;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-right: 65px;
     }
   }
-  &__title{
+
+  &__title {
     font-size: 16px;
     margin-bottom: 7px;
     font-weight: 600;
   }
-  &__text{
+
+  &__text {
     font-size: 14px;
-    font-weight: 400;
   }
 }

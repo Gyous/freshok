@@ -29,4 +29,10 @@ $(function () {
   };
   let mixer1 = mixitup('.products', config);
   let mixer2 = mixitup('.stocks', config);
+
+  $('.brands__items').slick({
+    slidesToScroll: 1,
+    slidesToShow: 6,
+    arrows: false
+  });
 });

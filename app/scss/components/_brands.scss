@@ -1,0 +1,22 @@
+.brands {
+  padding-bottom: 68px;
+  
+  &__items {
+    display: flex;
+    text-align: center;
+  }
+
+  &__link{
+    display: inline-block;
+  }
+
+  &__img {
+    object-fit: contain;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
