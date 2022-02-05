@@ -21,19 +21,19 @@
       max-width: 630px;
       width: 100%;
 
-      .banners__inner {
+      .banners-article {
         max-width: 350px;
       }
 
-      .banners__subtitle {
+      .banners-article__subtitle {
         text-shadow: 1px 1px 0 rgba($black, 0.25);
       }
 
-      .banners__title {
+      .banners-article__title {
         text-shadow: 2px 2px 0 rgba($black, 0.25);
       }
 
-      .banners__link {
+      .banners-article__link {
         text-shadow: 1px 1px 0 rgba($black, 0.25);
 
         &::after {
@@ -42,11 +42,11 @@
       }
     }
   }
+}
 
-  &__inner {
-    @extend %flex-column;
-    max-width: 190px;
-  }
+.banners-article {
+  @extend %flex-column;
+  max-width: 190px;
 
   &__subtitle {
     font-size: 12px;
@@ -84,20 +84,20 @@
       transition: background-color 0.3s;
     }
 
-    &:hover {
-      color: $green900;
-
-      &::after {
-        background-color: $green900;
-      }
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $white100;
       color: inherit;
 
       &::after {
         background-color: transparent;
+      }
+    }
+
+    &:hover {
+      color: $green900;
+
+      &::after {
+        background-color: $green900;
       }
     }
   }

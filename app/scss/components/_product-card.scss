@@ -9,6 +9,7 @@
   transition: border-color 0.3s;
   letter-spacing: 0.03em;
   background-color: $white;
+  text-align: left;
 
   &:hover {
     border-color: $green900;
@@ -22,7 +23,7 @@
     @extend %flex-between;
   }
 
-  &__favourite {
+  &__favorite {
     margin-left: auto;
     border-radius: 3px;
     font-size: 0;
@@ -92,24 +93,21 @@
   }
 
   &__title {
-    align-self: flex-start;
-    text-align: left;
-    margin: 0 18px;
+    position: relative;
+    z-index: 10;
+    padding: 0 18px;
     font-weight: 600;
     font-size: 14px;
-  }
-
-  &__name {
     @include line-clamp(3);
     @extend %transition;
     border-radius: 3px;
 
-    &:hover {
-      color: $green900;
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $white100;
+    }
+
+    &:hover {
+      color: $green900;
     }
 
     &:active {
@@ -153,9 +151,30 @@
     line-height: 0;
   }
 
-  &__basket-svg {
+  &__svg {
     width: 16px;
     height: 16px;
+  }
+
+  &__status {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    margin-bottom: 5px;
+    display: block;
+
+    &--available {
+      color: $green400;
+    }
+
+    &--finished {
+      color: $red700;
+    }
+
+    &--beover {
+      color: $silver600;
+    }
   }
 }
 
@@ -187,26 +206,5 @@
     &--hit {
       background-color: $orange900;
     }
-  }
-}
-
-.product-card__status {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  margin-bottom: 5px;
-  display: block;
-
-  &--available {
-    color: $green400;
-  }
-
-  &--finished {
-    color: $red700;
-  }
-
-  &--beover {
-    color: $silver600;
   }
 }

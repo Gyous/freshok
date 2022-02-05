@@ -9,6 +9,7 @@
     @extend %flex-between;
     align-items: center;
     margin-bottom: 30px;
+    margin-right: 8px;
   }
 
   &__link {
@@ -20,7 +21,6 @@
     font-weight: 700;
     color: $green400;
     padding-bottom: 2px;
-    margin-right: 8px;
     @extend %transition;
 
     &::before {
@@ -32,6 +32,10 @@
       transition: background-color 0.3s;
     }
 
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+    }
+
     &:hover {
       color: $green100;
       border-bottom-color: $green100;
@@ -39,10 +43,6 @@
       &::before {
         background-color: $green100;
       }
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px $white100;
     }
 
     &:active {
@@ -63,17 +63,17 @@
   &__item {
     border-radius: 6px;
     box-shadow: 0 3px 3px rgba($black, 0.25);
+  }
 
-    &-link {
-      font-weight: 600;
-      margin: 0 18px 18px;
-      line-height: 1.5;
-      transition: color 0.3s;
-      @include line-clamp(4);
+  &__item-link {
+    font-weight: 600;
+    margin: 0 18px 18px;
+    line-height: 1.5;
+    transition: color 0.3s;
+    @include line-clamp(4);
 
-      &:hover {
-        color: $green400;
-      }
+    &:hover {
+      color: $green400;
     }
   }
 
@@ -82,7 +82,7 @@
     margin-bottom: 17px;
   }
 
-  &__month {
+  &__date {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -96,12 +96,16 @@
     border-radius: 0 0 4px 4px;
   }
 
+  &__month {
+    display: block;
+    margin-bottom: 4px;
+  }
+
   &__number {
     font-size: 30px;
     line-height: 1;
     @extend %ruda-600;
     display: block;
-    margin-top: 4px;
   }
 
   &__img {

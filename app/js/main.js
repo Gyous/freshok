@@ -17,8 +17,8 @@ $(function () {
     slidesToScroll: 1,
     infinite: false,
     fade: true,
-    prevArrow: '<button class="slick-prev"><svg class="slick-arrow__svg slick-prev--svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button class="slick-next"><svg class="slick-arrow__svg slick-next--svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>'
+    prevArrow: '<button class="slick-arrow slick--prev"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button class="slick-arrow slick--next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>'
   });
   var containerMix1 = document.querySelector('[data-ref="mixProducts"]');
   var containerMix2 = document.querySelector('[data-ref="mixStocks"]');

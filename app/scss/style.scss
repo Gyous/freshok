@@ -5,16 +5,21 @@
 @import 'libs';
 @import 'mixin';
 
+
+// Home
+@import 'home/main-slider';
+@import 'home/products';
+@import 'home/stocks';
+@import 'home/brands';
+@import 'home/news';
+
+// Header и footer
 @import 'components/header';
-@import 'components/main-slider';
+@import 'components/footer';
+
+// Остальные компоненты
 @import 'components/benefits';
 @import 'components/filters';
-@import 'components/products';
 @import 'components/product-card';
-
 @import 'components/banners';
-@import 'components/stocks';
-@import 'components/brands';
-@import 'components/news';
-@import 'components/footer';
 @import 'components/socials';

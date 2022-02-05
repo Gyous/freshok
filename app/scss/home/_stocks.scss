@@ -37,10 +37,7 @@
       margin-right: 12px;
       margin-bottom: 0;
 
-      &::after {
-        display: none;
-      }
-
+      &::after,
       &::before {
         display: none;
       }
@@ -52,13 +49,7 @@
     }
 
     &__title {
-      margin: 0;
-    }
-
-    &__name {
-      margin: 0;
-      position: relative;
-      z-index: 5;
+      padding: 0;
     }
 
     &__bottom {

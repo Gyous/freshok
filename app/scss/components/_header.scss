@@ -38,12 +38,12 @@
       height: 22px;
     }
 
-    &:hover {
-      opacity: 0.7;
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $white100;
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
 
     &:active {
@@ -84,12 +84,12 @@
       @extend %transition;
       border-radius: 3px;
 
-      &:hover {
-        opacity: 0.7;
-      }
-
       &:focus {
         box-shadow: 0 0 0 3px $white100;
+      }
+
+      &:hover {
+        opacity: 0.7;
       }
 
       &:active {
@@ -306,12 +306,12 @@
     @extend %flex-center;
     @extend %transition;
 
-    &:hover {
-      background-color: rgba($white, 0.1);
-    }
-
     &:focus {
       box-shadow: 0 0 0 3px $white100;
+    }
+
+    &:hover {
+      background-color: rgba($white, 0.1);
     }
 
     &:active {

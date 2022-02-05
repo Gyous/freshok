@@ -29,10 +29,6 @@
       transition: background-color 0.3s;
     }
 
-    &:hover {
-      color: $green400;
-    }
-
     &:focus {
       color: $dark500;
       box-shadow: 0 0 0 4px $green200;
@@ -41,6 +37,11 @@
         background-color: transparent;
       }
     }
+
+    &:hover {
+      color: $green400;
+    }
+
   }
 }
 
