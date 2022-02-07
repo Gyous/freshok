@@ -89,7 +89,7 @@
   }
 
   &__img {
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__title {
@@ -98,7 +98,6 @@
     padding: 0 18px;
     font-weight: 600;
     font-size: 14px;
-    @include line-clamp(3);
     @extend %transition;
     border-radius: 3px;
 
@@ -113,6 +112,10 @@
     &:active {
       color: rgba($green900, 0.7);
     }
+  }
+
+  &__name {
+    @include line-clamp(3);
   }
 
   &__bottom {
@@ -205,6 +208,43 @@
 
     &--hit {
       background-color: $orange900;
+    }
+  }
+}
+
+@include r(768) {
+  .product-card {
+    padding-bottom: 12px;
+
+    &__box {
+      margin-bottom: 8px;
+    }
+
+    &__title,
+    &__bottom {
+      padding: 0 12px;
+    }
+
+    &__title {
+      margin-bottom: 48px;
+    }
+
+    &__img {
+      height: 180px;
+      width: 100%;
+    }
+  }
+}
+
+@include r(468) {
+  .product-card {
+    &__img {
+      height: 126px;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 21px;
     }
   }
 }

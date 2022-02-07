@@ -20,3 +20,13 @@
     }
   }
 }
+
+@include r(768) {
+  .brands {
+    padding-bottom: 41px;
+
+    &__img {
+      opacity: 1;
+    }
+  }
+}

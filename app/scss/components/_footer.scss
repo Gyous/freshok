@@ -22,7 +22,7 @@
     padding: 14px 16px;
   }
 
-  &__navigation {
+  &__list {
     column-count: 3;
     column-gap: 75px;
     column-width: 130px;
@@ -45,27 +45,6 @@
 
     &:focus {
       box-shadow: 0 0 0 3px $white100;
-    }
-  }
-
-  &__address {
-    max-width: 215px;
-    width: 100%;
-  }
-
-  &__data {
-    display: block;
-    border-radius: 3px;
-    margin-bottom: 19px;
-    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s;
-
-    &:focus {
-      box-shadow: 0 0 0 3px $white100;
-    }
-
-    &:hover,
-    &:focus {
-      color: $green900;
     }
   }
 
@@ -147,6 +126,102 @@
 
     &--small {
       width: 49px;
+    }
+  }
+}
+
+@include r(1000) {
+  .footer {
+    padding: 24px 0;
+
+    &__top {
+      flex-direction: column;
+      margin: 0 -15px;
+      padding-bottom: 24px;
+    }
+
+    &__navigation {
+      border-bottom: 1px solid rgba($white, 0.1);
+    }
+
+    &__list {
+      padding: 24px 15px;
+    }
+
+    &__link {
+      padding: 6px 0;
+    }
+
+    .address {
+      order: -1;
+      padding: 0 15px 24px;
+      border-bottom: 1px solid rgba($white, 0.1);
+      max-width: 100%;
+
+      &__info {
+        margin-bottom: 17px;
+      }
+    }
+
+    .subscribe-form {
+      order: 1;
+      padding: 24px 15px 0;
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    .logo__img {
+      display: block;
+    }
+  }
+}
+
+@include r(468) {
+  .footer {
+    text-align: center;
+
+    &__list {
+      text-align: left;
+      max-width: 300px;
+      margin: 0 auto;
+      column-count: 2;
+      column-width: 110px;
+      column-gap: 42px;
+      padding: 21px 0 9px;
+    }
+
+    &__item {
+      margin-bottom: 12px;
+      width: 100%;
+      margin-left: 31px;
+    }
+
+    &__btn {
+      padding: 14px;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__copy {
+      margin-top: 24px;
+      order: 1;
+    }
+
+    .socials {
+      justify-content: center;
+    }
+
+    .subscribe-form {
+      text-align: left;
+      max-width: 300px;
+      align-self: center;
+      padding: 24px 0 0;
+
+      &__inner {
+        justify-content: center;
+      }
     }
   }
 }

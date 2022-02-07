@@ -1,10 +1,8 @@
 .main-slider {
-  &__item {
+  &__wrapper {
     @extend %background-image;
     height: 600px;
     padding: 142px 0;
-    display: flex;
-    align-items: center;
   }
 
   &__inner {
@@ -93,10 +91,125 @@
   }
 
   .slick--prev {
-    left: 54px;
+    left: 60px;
   }
 
   .slick--next {
-    right: 50px;
+    right: 60px;
+  }
+
+  .slick-dots {
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    position: absolute;
+
+    li:not(:last-child) {
+      margin-right: 13px;
+    }
+
+    button {
+      width: 20px;
+      height: 20px;
+      background-color: $white;
+      border-radius: 50%;
+      border: 1px solid $silver600;
+      font-size: 0;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $green400;
+      border-color: $green400;
+    }
+  }
+}
+
+@include r(1000) {
+  .main-slider {
+    &__wrapper {
+      height: 500px;
+      padding: 90px 0;
+    }
+
+    &__title {
+      font-size: 52px;
+      line-height: 58px;
+    }
+  }
+}
+
+@include r(768) {
+  .main-slider {
+    &__wrapper {
+      height: 430px;
+      padding: 70px 0;
+    }
+
+    &__inner {
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+}
+
+@include r(576) {
+  .main-slider {
+    &__container {
+      margin: 0 -15px;
+    }
+
+    &__wrapper {
+      height: 360px;
+      padding: 60px 0;
+    }
+
+    &__inner {
+      padding: 15px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      @include line-clamp(2);
+    }
+
+    &__text {
+      margin-bottom: 24px;
+    }
+
+    .slick-dots {
+      button {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+  .btn--slider {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+
+@include r(468) {
+  .main-slider {
+    &__wrapper {
+      height: 320px;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
   }
 }

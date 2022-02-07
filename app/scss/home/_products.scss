@@ -9,3 +9,30 @@
     margin-bottom: 45px;
   }
 }
+
+@include r(1000) {
+  .products {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+
+@include r(768) {
+  .products {
+    &__items {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin-bottom: 24px;
+      grid-auto-rows: auto;
+    }
+  }
+}
+
+@include r(468) {
+  .products {
+    &__items {
+      grid-gap: 4px 5px;
+    }
+  }
+}

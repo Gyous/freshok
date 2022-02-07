@@ -16,9 +16,11 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(auto, 300px));
     grid-template-rows: 124px;
-    grid-gap: 30px;
+    justify-content: space-between;
+    column-gap: 15px;
+    row-gap: 30px;
     margin-bottom: 48px;
   }
 
@@ -96,6 +98,7 @@
 
       &::before {
         @extend %absolute-pseudo;
+        top: -1px;
         right: 0;
         width: 16px;
         height: 15px;
@@ -106,5 +109,67 @@
 
   .condition {
     margin-bottom: 5px;
+  }
+}
+
+@include r(1250) {
+  .stocks {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+
+@include r(1000) {
+  .stocks {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include r(768) {
+  .stocks {
+    &__items {
+      margin-bottom: 24px;
+    }
+
+    .product-card {
+      &__box {
+        margin-right: 0;
+      }
+
+      &__img {
+        height: 100px;
+      }
+
+      &__title {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+@include r(576) {
+  .stocks {
+    &__items {
+      grid-template-columns: repeat(1, minmax(auto, 300px));
+      justify-content: center;
+    }
+
+    .products-filters {
+      margin-bottom: 11px;
+
+      &__item:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    .product-card {
+      &__box {
+        margin-right: 12px;
+      }
+    }
   }
 }

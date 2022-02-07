@@ -1,0 +1,23 @@
+.address {
+  max-width: 215px;
+  width: 100%;
+
+  &__data {
+    display: inline-block;
+    border-radius: 3px;
+    transition: box-shadow 0.3s, color 0.3s, opacity 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+    }
+
+    &:hover,
+    &:focus {
+      color: $green900;
+    }
+  }
+
+  &__info {
+    margin-bottom: 19px;
+  }
+}

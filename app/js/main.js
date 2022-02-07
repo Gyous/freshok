@@ -18,7 +18,16 @@ $(function () {
     infinite: false,
     fade: true,
     prevArrow: '<button class="slick-arrow slick--prev"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button class="slick-arrow slick--next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>'
+    nextArrow: '<button class="slick-arrow slick--next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1540,
+        settings: {
+          arrows: false,
+          dots: true
+        }
+      },
+    ]
   });
   var containerMix1 = document.querySelector('[data-ref="mixProducts"]');
   var containerMix2 = document.querySelector('[data-ref="mixStocks"]');
@@ -33,6 +42,42 @@ $(function () {
   $('.brands__items').slick({
     slidesToScroll: 1,
     slidesToShow: 6,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings:{
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 1000,
+        settings:{
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings:{
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 468,
+        settings:{
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ]
+  });
+
+  $('.burger').on('click', function(){
+    $('.burger').toggleClass('burger--active');
+    $('.menu-adaptive').toggleClass('menu-adaptive--active');
+    $('.body').toggleClass('body--active');
+  });
+  $('.navigation__item--search').on('click', function(){
+    $('.form-search').toggleClass('form-search--active');
   });
 });
