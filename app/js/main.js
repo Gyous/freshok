@@ -78,11 +78,15 @@ $(function () {
   });
 
   $('.shop__content-btn--list').on('click', function(){
-    $('.product-card').addClass('product-card--list')
+    $('.product-card').addClass('product-card--list');
+    $('.shop-market').removeClass('shop-market--grid');
+    $('.shop-market').addClass('shop-market--list');
   })
 
   $('.shop__content-btn--grid').on('click', function(){
-    $('.product-card').removeClass('product-card--list')
+    $('.product-card').removeClass('product-card--list');
+    $('.shop-market').addClass('shop-market--grid');
+    $('.shop-market').removeClass('shop-market--list');
   })
 
   $('.shop__content-sort').styler();
