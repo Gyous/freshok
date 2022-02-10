@@ -29,15 +29,6 @@ $(function () {
       },
     ]
   });
-  var containerMix1 = document.querySelector('[data-ref="mixProducts"]');
-  var containerMix2 = document.querySelector('[data-ref="mixStocks"]');
-  var config = {
-    controls:{
-      scope: 'local'
-    }
-  };
-  let mixer1 = mixitup('.products', config);
-  let mixer2 = mixitup('.stocks', config);
 
   $('.brands__items').slick({
     slidesToScroll: 1,
@@ -80,4 +71,29 @@ $(function () {
   $('.navigation__item--search').on('click', function(){
     $('.form-search').toggleClass('form-search--active');
   });
+
+  $('.shop__content-btn').on('click', function(){
+    $('.shop__content-btn').removeClass('shop__content-btn--active');
+    $(this).addClass('shop__content-btn--active');
+  });
+
+  $('.shop__content-btn--list').on('click', function(){
+    $('.product-card').addClass('product-card--list')
+  })
+
+  $('.shop__content-btn--grid').on('click', function(){
+    $('.product-card').removeClass('product-card--list')
+  })
+
+  $('.shop__content-sort').styler();
+
+  var containerMix1 = document.querySelector('[data-ref="mixProducts"]');
+  var containerMix2 = document.querySelector('[data-ref="mixStocks"]');
+  var config = {
+    controls:{
+      scope: 'local'
+    }
+  };
+  let mixer1 = mixitup('.products', config);
+  let mixer2 = mixitup('.stocks', config);
 });

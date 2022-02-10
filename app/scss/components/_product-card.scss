@@ -179,6 +179,29 @@
       color: $silver600;
     }
   }
+  &__description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    line-height: 1;
+    margin: -22px 0 7px;
+    position: relative;
+    .product-card__star{
+      position: relative;
+      padding-right: 19px;
+      @extend %sans-700;
+      letter-spacing: 0.03em;
+      &::after{
+        @extend %absolute-pseudo;
+        top: -1px;
+        right: 0;
+        height: 16px;
+        width: 16px;
+        background-image: url("../images/icons/star.svg");
+      }
+    }
+  }
 }
 
 .badges {
