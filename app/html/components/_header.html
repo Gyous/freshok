@@ -9,12 +9,12 @@
         <span class="sr-only">закрыть меню</span>
       </button>
     </div>
-    <ul class="menu-adaptive__login">
-      <li class="menu-adaptive__login-item">
-        <a class="menu-adaptive__login-link" href="#">Вход</a>
+    <ul class="menu-adaptive__account">
+      <li class="menu-adaptive__account-item">
+        <a class="menu-adaptive__account-link" href="#">Вход</a>
       </li>
-      <li class="menu-adaptive__login-item">
-        <a class="menu-adaptive__login-link" href="#">Регистрация</a>
+      <li class="menu-adaptive__account-item">
+        <a class="menu-adaptive__account-link" href="#">Регистрация</a>
       </li>
     </ul>
     <a class="catalog__btn" href="#">
@@ -169,9 +169,9 @@
 
           <form class="form-search" action="#">
             <label class="sr-only" for="search">Найти в магазине</label>
-            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..."
-              required>
-            <input class="form-search__input form-search__input--adaptive" type="search" name="search" id="search"
+            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..." required>
+            <label class="sr-only" for="searchadapt"></label>
+            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt" id="searchadapt"
               placeholder="Я ищу..." required>
             <button class="btn btn--black" type="button">Поиск</button>
           </form>
@@ -185,7 +185,7 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--search">
-              <button class="navigation__link" href="#">
+              <button class="navigation__link">
                 <span class="sr-only">Поиск товаров</span>
                 <svg class="navigation__svg">
                   <use xlink:href="images/sprite.svg#header-search-adaptive"></use>

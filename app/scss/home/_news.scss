@@ -1,8 +1,16 @@
 .news {
   padding-bottom: 72px;
 
+  @include r($tablet) {
+    padding-bottom: 48px;
+  }
+
   .title {
     margin-bottom: 0;
+
+    @include r($phone) {
+      margin-bottom: 12px;
+    }
   }
 
   &__top {
@@ -10,18 +18,31 @@
     align-items: center;
     margin-bottom: 30px;
     margin-right: 8px;
+
+    @include r($desktop) {
+      margin-bottom: 25px;
+    }
+
+    @include r($tablet-1) {
+      margin-right: 0;
+    }
+
+    @include r($phone) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
-  &__link {
+  &__top-link {
     position: relative;
     text-transform: uppercase;
     border-radius: 3px;
     font-size: 14px;
     line-height: 1.3;
-    font-weight: 700;
+    font-weight: $fw-700;
     color: $green400;
     padding-bottom: 2px;
-    @extend %transition;
+    transition: box-shadow 0.3s, color 0.3s;
 
     &::before {
       @extend %absolute-pseudo;
@@ -58,6 +79,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+
+    @include r($desktop) {
+      grid-gap: 20px;
+    }
+
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($tablet-1) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include r($phone) {
+      grid-gap: 15px;
+    }
   }
 
   &__item {
@@ -65,12 +102,21 @@
     box-shadow: 0 3px 3px rgba($black, 0.25);
   }
 
-  &__item-link {
-    font-weight: 600;
+  &__link {
+    font-weight: $fw-600;
     margin: 0 18px 18px;
     line-height: 1.5;
     transition: color 0.3s;
     @include line-clamp(4);
+
+    @include r($desktop) {
+      margin: 0 15px 15px;
+      line-height: 1.4;
+    }
+
+    @include r($phone) {
+      font-size: 14px;
+    }
 
     &:hover {
       color: $green400;
@@ -80,11 +126,15 @@
   &__head {
     position: relative;
     margin-bottom: 17px;
+
+    @include r($tablet) {
+      margin-bottom: 15px;
+    }
   }
 
   &__date {
     font-size: 10px;
-    font-weight: 700;
+    font-weight: $fw-700;
     letter-spacing: 0.1em;
     position: absolute;
     width: 65px;
@@ -104,84 +154,21 @@
   &__number {
     font-size: 30px;
     line-height: 1;
-    @extend %ruda-600;
+    font-family: $ruda;
+    font-weight: $fw-600;
     display: block;
   }
 
   &__img {
     object-fit: cover;
-    border-radius: 6px 6px 0px 0px;
-  }
-}
+    border-radius: 6px 6px 0 0;
 
-@include r(1200) {
-  .news {
-    &__top {
-      margin-bottom: 25px;
-    }
-
-    &__items {
-      grid-gap: 20px;
-    }
-
-    &__item-link {
-      margin: 0 15px 15px;
-      line-height: 1.4;
-    }
-  }
-}
-
-@include r(1000) {
-  .news {
-    padding-bottom: 48px;
-
-    &__items {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    &__head {
-      margin-bottom: 15px;
-    }
-
-    &__img {
+    @include r($tablet) {
       width: 100%;
     }
-  }
-}
 
-@include r(768) {
-  .news {
-    &__top {
-      margin-right: 0;
-    }
-
-    &__items {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    &__img {
+    @include r($tablet-1) {
       height: 200px;
-    }
-  }
-}
-
-@include r(468) {
-  .news {
-    .title {
-      margin-bottom: 12px;
-    }
-
-    &__top {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    &__items {
-      grid-gap: 15px;
-    }
-
-    &__item-link {
-      font-size: 14px;
     }
   }
 }

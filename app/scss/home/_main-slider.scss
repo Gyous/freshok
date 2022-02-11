@@ -3,6 +3,31 @@
     @extend %background-image;
     height: 600px;
     padding: 142px 0;
+
+    @include r($tablet) {
+      height: 500px;
+      padding: 90px 0;
+    }
+
+    @include r($tablet-1) {
+      height: 430px;
+      padding: 70px 0;
+    }
+
+    @include r($tablet-2) {
+      height: 360px;
+      padding: 60px 0;
+    }
+
+    @include r($phone) {
+      height: 320px;
+    }
+  }
+
+  &__container {
+    @include r($tablet-2) {
+      margin: 0 -15px;
+    }
   }
 
   &__inner {
@@ -11,18 +36,50 @@
     width: 100%;
     border-radius: 4px;
     background-color: rgba($white, 0.80);
+
+    @include r($tablet-1) {
+      padding: 20px;
+    }
+
+    @include r($tablet-2) {
+      padding: 15px;
+    }
   }
 
   &__title {
     max-width: 800px;
-    font-family: 'Ruda', sans-serif;
-    font-weight: 900;
+    font-family: $ruda;
+    font-weight: $fw-900;
     text-transform: uppercase;
     margin-bottom: 9px;
     color: $dark500;
     font-size: 60px;
     line-height: 78px;
     @include line-clamp(3);
+
+    @include r($tablet) {
+      font-size: 52px;
+      line-height: 58px;
+    }
+
+    @include r($tablet-1) {
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    @include r($tablet-2) {
+      font-size: 36px;
+      line-height: 40px;
+      margin-bottom: 15px;
+      font-weight: $fw-700;
+      @include line-clamp(2);
+    }
+
+    @include r($phone) {
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: 0;
+    }
   }
 
   &__subtitle {
@@ -32,15 +89,24 @@
 
   &__text {
     margin-bottom: 32px;
+
+    @include r($tablet-2) {
+      margin-bottom: 24px;
+    }
   }
 
-  &__btn {
+  .btn {
     align-self: flex-start;
+
+    @include r($tablet-2) {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
   }
 
-  .slick-arrow {
+  &__arrow {
     position: absolute;
-    @extend %transition;
+    transition: box-shadow 0.3s, background-color 0.3s;
     @extend %absolute-top-trasform;
     z-index: 50;
     padding: 12px 20px;
@@ -48,8 +114,12 @@
     border-radius: 6px;
     line-height: 1;
 
-    &__svg {
-      fill: $dark500;
+    &--prev {
+      left: 60px;
+    }
+
+    &--next {
+      right: 60px;
     }
 
     &:hover {
@@ -76,26 +146,19 @@
         fill: $green900;
       }
     }
+  }
 
-    &__svg {
-      @extend %transition;
-      width: 19px;
-      height: 32px;
-    }
+  &__svg {
+    transition: fill 0.3s;
+    width: 19px;
+    height: 32px;
+    fill: $dark500;
   }
 
   .slick-disabled {
     .slick-arrow__svg {
       fill: $silver600;
     }
-  }
-
-  .slick--prev {
-    left: 60px;
-  }
-
-  .slick--next {
-    right: 60px;
   }
 
   .slick-dots {
@@ -116,6 +179,11 @@
       border-radius: 50%;
       border: 1px solid $silver600;
       font-size: 0;
+
+      @include r($tablet-2) {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
@@ -123,93 +191,6 @@
     button {
       background-color: $green400;
       border-color: $green400;
-    }
-  }
-}
-
-@include r(1000) {
-  .main-slider {
-    &__wrapper {
-      height: 500px;
-      padding: 90px 0;
-    }
-
-    &__title {
-      font-size: 52px;
-      line-height: 58px;
-    }
-  }
-}
-
-@include r(768) {
-  .main-slider {
-    &__wrapper {
-      height: 430px;
-      padding: 70px 0;
-    }
-
-    &__inner {
-      padding: 20px;
-    }
-
-    &__title {
-      font-size: 44px;
-      line-height: 50px;
-    }
-  }
-}
-
-@include r(576) {
-  .main-slider {
-    &__container {
-      margin: 0 -15px;
-    }
-
-    &__wrapper {
-      height: 360px;
-      padding: 60px 0;
-    }
-
-    &__inner {
-      padding: 15px;
-    }
-
-    &__title {
-      font-size: 36px;
-      line-height: 40px;
-      margin-bottom: 15px;
-      font-weight: 700;
-      @include line-clamp(2);
-    }
-
-    &__text {
-      margin-bottom: 24px;
-    }
-
-    .slick-dots {
-      button {
-        width: 10px;
-        height: 10px;
-      }
-    }
-  }
-
-  .btn--slider {
-    font-size: 14px;
-    padding: 12px 24px;
-  }
-}
-
-@include r(468) {
-  .main-slider {
-    &__wrapper {
-      height: 320px;
-    }
-
-    &__title {
-      font-size: 20px;
-      line-height: 1.3;
-      letter-spacing: 0;
     }
   }
 }

@@ -12,13 +12,32 @@ $(function () {
     }
   });
 
+  $('.burger').on('click', function(){
+    $('.burger').toggleClass('burger--active');
+    $('.menu-adaptive').toggleClass('menu-adaptive--active');
+    $('.body').toggleClass('body--active');
+  });
+
+  $(document).mouseup(function (e) {
+    let btnburger = $('.burger');
+    if (!btnburger.is(e.target) && btnburger.has(e.target).length === 0) {
+      $('.menu-adaptive').removeClass('menu-adaptive--active');
+      $('.burger').removeClass('burger--active');
+      $('.body').removeClass('body--active');
+    }
+  });
+
+  $('.navigation__item--search').on('click', function(){
+    $('.form-search').toggleClass('form-search--active');
+  });
+
   $('.main-slider__items').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
     fade: true,
-    prevArrow: '<button class="slick-arrow slick--prev"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
-    nextArrow: '<button class="slick-arrow slick--next"><svg class="slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button class="main-slider__arrow main-slider__arrow--prev slick--prev"><svg class="main-slider__svg slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button class="main-slider__arrow main-slider__arrow--next slick--next"><svg class="main-slider__svg slick-arrow__svg"><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     responsive: [
       {
         breakpoint: 1540,
@@ -61,15 +80,6 @@ $(function () {
         },
       },
     ]
-  });
-
-  $('.burger').on('click', function(){
-    $('.burger').toggleClass('burger--active');
-    $('.menu-adaptive').toggleClass('menu-adaptive--active');
-    $('.body').toggleClass('body--active');
-  });
-  $('.navigation__item--search').on('click', function(){
-    $('.form-search').toggleClass('form-search--active');
   });
 
   $('.shop__content-btn').on('click', function(){

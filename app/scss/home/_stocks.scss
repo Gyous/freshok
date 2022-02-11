@@ -10,7 +10,15 @@
     &__item {
       &:not(:last-child) {
         margin-right: 32px;
+
+        @include r($tablet-2) {
+          margin-right: 0;
+        }
       }
+    }
+
+    @include r($tablet-2) {
+      margin-bottom: 11px;
     }
   }
 
@@ -18,10 +26,26 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 300px));
     grid-template-rows: 124px;
-    justify-content: space-between;
-    column-gap: 15px;
-    row-gap: 30px;
+    grid-gap: 30px;
     margin-bottom: 48px;
+
+    @include r($desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+    }
+
+    @include r($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r($tablet-1) {
+      margin-bottom: 24px;
+    }
+
+    @include r($tablet-2) {
+      grid-template-columns: repeat(1, minmax(auto, 300px));
+      justify-content: center;
+    }
   }
 
   .product-card {
@@ -39,9 +63,23 @@
       margin-right: 12px;
       margin-bottom: 0;
 
+      @include r($tablet-1) {
+        margin-right: 0;
+      }
+
+      @include r($tablet-2) {
+        margin-right: 12px;
+      }
+
       &::after,
       &::before {
         display: none;
+      }
+    }
+
+    &__img {
+      @include r($tablet-1) {
+        height: 100px;
       }
     }
 
@@ -52,6 +90,10 @@
 
     &__title {
       padding: 0;
+
+      @include r($tablet-1) {
+        margin-bottom: 6px;
+      }
     }
 
     &__bottom {
@@ -69,7 +111,7 @@
     &__prices {
       align-items: flex-end;
       flex-direction: row;
-      font-weight: 600;
+      font-weight: $fw-600;
     }
 
     &__price {
@@ -90,7 +132,7 @@
     &__star {
       position: relative;
       color: $dark500;
-      font-weight: 700;
+      font-weight: $fw-700;
       padding-right: 18px;
       background-size: auto;
       background-repeat: no-repeat;
@@ -109,67 +151,5 @@
 
   .condition {
     margin-bottom: 5px;
-  }
-}
-
-@include r(1250) {
-  .stocks {
-    &__items {
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 15px;
-    }
-  }
-}
-
-@include r(1000) {
-  .stocks {
-    &__items {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-
-@include r(768) {
-  .stocks {
-    &__items {
-      margin-bottom: 24px;
-    }
-
-    .product-card {
-      &__box {
-        margin-right: 0;
-      }
-
-      &__img {
-        height: 100px;
-      }
-
-      &__title {
-        margin-bottom: 6px;
-      }
-    }
-  }
-}
-
-@include r(576) {
-  .stocks {
-    &__items {
-      grid-template-columns: repeat(1, minmax(auto, 300px));
-      justify-content: center;
-    }
-
-    .products-filters {
-      margin-bottom: 11px;
-
-      &__item:not(:last-child) {
-        margin-right: 0;
-      }
-    }
-
-    .product-card {
-      &__box {
-        margin-right: 12px;
-      }
-    }
   }
 }

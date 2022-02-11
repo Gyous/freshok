@@ -11,6 +11,10 @@
   background-color: $white;
   text-align: left;
 
+  @include r($tablet-1) {
+    padding-bottom: 12px;
+  }
+
   &:hover {
     border-color: $green900;
   }
@@ -21,13 +25,14 @@
     left: 12px;
     right: 10px;
     @extend %flex-between;
+    z-index: 5;
   }
 
   &__favorite {
     margin-left: auto;
     border-radius: 3px;
     font-size: 0;
-    @extend %transition;
+    transition: box-shadow 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 3px $white100;
@@ -37,8 +42,13 @@
   &__icon {
     width: 32px;
     height: 33px;
-    @extend %transition;
+    transition: fill 0.3s;
     fill: $silver600;
+
+    @include r($phone) {
+      width: 24px;
+      height: 21px;
+    }
 
     &:hover {
       fill: $yellow900;
@@ -52,6 +62,10 @@
   &__box {
     position: relative;
     margin-bottom: 18px;
+
+    @include r($tablet-1) {
+      margin-bottom: 8px;
+    }
 
     &::before {
       @extend %absolute-pseudo;
@@ -76,7 +90,7 @@
       transform: translate(-50%, -50%);
       opacity: 0;
       transition: opacity 0.3s;
-      background-image: url('../../images/icons/product-search.svg');
+      background-image: url('../images/icons/product-search.svg');
     }
 
     &:hover::before {
@@ -88,18 +102,38 @@
     }
   }
 
+  &__inner {
+    @extend %flex-column;
+    height: 100%;
+    width: 100%;
+  }
+
   &__img {
     object-fit: contain;
+
+    @include r($tablet-1) {
+      width: 100%;
+      height: 180px;
+    }
+
+    @include r($phone) {
+      height: 126px;
+    }
   }
 
   &__title {
     position: relative;
     z-index: 10;
     padding: 0 18px;
-    font-weight: 600;
+    font-weight: $fw-400;
     font-size: 14px;
-    @extend %transition;
     border-radius: 3px;
+    transition: box-shadow 0.3s, color 0.3s;
+
+    @include r($tablet-1) {
+      padding: 0 12px;
+      margin-bottom: 48px;
+    }
 
     &:focus {
       box-shadow: 0 0 0 3px $white100;
@@ -125,6 +159,10 @@
     text-align: left;
     align-items: flex-end;
     margin-top: auto;
+
+    @include r($tablet-1) {
+      padding: 0 12px;
+    }
   }
 
   &__prices {
@@ -160,7 +198,7 @@
   }
 
   &__status {
-    font-weight: 600;
+    font-weight: $fw-600;
     font-size: 11px;
     line-height: 1;
     letter-spacing: 0.03em;
@@ -179,7 +217,8 @@
       color: $silver600;
     }
   }
-  &__description{
+
+  &__description {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -187,12 +226,15 @@
     line-height: 1;
     margin: -22px 0 7px;
     position: relative;
-    .product-card__star{
+
+    .product-card__star {
       position: relative;
       padding-right: 19px;
-      @extend %sans-700;
+      font-family: $sans;
+      font-weight: $fw-700;
       letter-spacing: 0.03em;
-      &::after{
+
+      &::after {
         @extend %absolute-pseudo;
         top: -1px;
         right: 0;
@@ -211,7 +253,7 @@
     text-transform: uppercase;
     padding: 3px 6px;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: $fw-700;
     border-radius: 6px;
     color: $white;
     line-height: 1;
@@ -231,43 +273,6 @@
 
     &--hit {
       background-color: $orange900;
-    }
-  }
-}
-
-@include r(768) {
-  .product-card {
-    padding-bottom: 12px;
-
-    &__box {
-      margin-bottom: 8px;
-    }
-
-    &__title,
-    &__bottom {
-      padding: 0 12px;
-    }
-
-    &__title {
-      margin-bottom: 48px;
-    }
-
-    &__img {
-      height: 180px;
-      width: 100%;
-    }
-  }
-}
-
-@include r(468) {
-  .product-card {
-    &__img {
-      height: 126px;
-    }
-
-    &__icon {
-      width: 24px;
-      height: 21px;
     }
   }
 }

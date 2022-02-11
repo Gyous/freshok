@@ -5,6 +5,12 @@
     display: flex;
     justify-content: center;
     padding: 48px 0 29px;
+    @include r($tablet){
+      padding: 30px 0;
+    }
+    @include r($tablet-1){
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -14,44 +20,27 @@
     padding-left: 76px;
     background-size: auto;
     background-position: left top;
+    @include r($tablet-1){
+      max-width: 100%;
+    }
 
     &:not(:last-child) {
       margin-right: 65px;
-    }
-  }
-
-  &__title {
-    font-size: 16px;
-    margin-bottom: 7px;
-    font-weight: 600;
-  }
-
-  &__text {
-    font-size: 14px;
-  }
-}
-
-@include r(1000) {
-  .benefits {
-    &__inner {
-      padding: 30px 0;
-    }
-  }
-}
-
-@include r(800) {
-  .benefits {
-    &__inner {
-      flex-direction: column;
-    }
-
-    &__item {
-      max-width: 100%;
-
-      &:not(:last-child) {
+      @include r($tablet-1){
         margin-right: 0;
         margin-bottom: 30px;
       }
     }
+  }
+
+  &__title {
+    font-weight: $fw-600;
+    font-size: 16px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-size: 14px;
   }
 }

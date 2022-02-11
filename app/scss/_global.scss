@@ -21,8 +21,8 @@ body {
 
 .logo {
   border-radius: 3px;
-  @extend %transition;
   flex-shrink: 0;
+  transition: box-shadow 0.3s, opacity 0.3s;
 
   &__img {
     object-fit: cover;
@@ -50,7 +50,7 @@ body {
   background-color: $green900;
   letter-spacing: 0.03em;
   align-self: flex-start;
-  @extend %transition;
+  transition: box-shadow 0.3s, color 0.3s, background-color 0.3s;
 
   &:focus {
     box-shadow: 0 0 0 4px $green200;
@@ -106,7 +106,7 @@ body {
     }
   }
 
-  &--products {
+  &--white {
     background-color: transparent;
     color: $green900;
     border: 1px solid $green900;
@@ -124,14 +124,25 @@ body {
 
 .section {
   padding: 72px 0;
+  @media (max-width: 1000px){
+    padding: 48px 0;
+  }
 }
 
 .title {
-  @extend %ruda-600;
+  font-family: $ruda;
+  font-weight: $fw-600;
   font-size: 32px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 30px;
+  @media (max-width: 1000px){
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  @media (max-width: 468px){
+    font-size: 24px;
+  }
 }
 
 .sr-only {
@@ -146,21 +157,4 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-@media(max-width: 1000px) {
-  .section {
-    padding: 48px 0;
-  }
-
-  .title {
-    font-size: 28px;
-    margin-bottom: 24px;
-  }
-}
-
-@media(max-width: 468px) {
-  .title {
-    font-size: 24px;
-  }
 }

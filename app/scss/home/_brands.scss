@@ -1,6 +1,10 @@
 .brands {
   padding-bottom: 68px;
 
+  @include r($tablet-1) {
+    padding-bottom: 41px;
+  }
+
   &__items {
     display: flex;
     text-align: center;
@@ -15,17 +19,11 @@
     opacity: 0.5;
     transition: opacity 0.3s;
 
-    &:hover {
+    @include r($tablet-1) {
       opacity: 1;
     }
-  }
-}
 
-@include r(768) {
-  .brands {
-    padding-bottom: 41px;
-
-    &__img {
+    &:hover {
       opacity: 1;
     }
   }

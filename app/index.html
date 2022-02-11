@@ -24,12 +24,12 @@
         <span class="sr-only">закрыть меню</span>
       </button>
     </div>
-    <ul class="menu-adaptive__login">
-      <li class="menu-adaptive__login-item">
-        <a class="menu-adaptive__login-link" href="#">Вход</a>
+    <ul class="menu-adaptive__account">
+      <li class="menu-adaptive__account-item">
+        <a class="menu-adaptive__account-link" href="#">Вход</a>
       </li>
-      <li class="menu-adaptive__login-item">
-        <a class="menu-adaptive__login-link" href="#">Регистрация</a>
+      <li class="menu-adaptive__account-item">
+        <a class="menu-adaptive__account-link" href="#">Регистрация</a>
       </li>
     </ul>
     <a class="catalog__btn" href="#">
@@ -184,9 +184,9 @@
 
           <form class="form-search" action="#">
             <label class="sr-only" for="search">Найти в магазине</label>
-            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..."
-              required>
-            <input class="form-search__input form-search__input--adaptive" type="search" name="search" id="search"
+            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..." required>
+            <label class="sr-only" for="searchadapt"></label>
+            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt" id="searchadapt"
               placeholder="Я ищу..." required>
             <button class="btn btn--black" type="button">Поиск</button>
           </form>
@@ -200,7 +200,7 @@
               </a>
             </li>
             <li class="navigation__item navigation__item--search">
-              <button class="navigation__link" href="#">
+              <button class="navigation__link">
                 <span class="sr-only">Поиск товаров</span>
                 <svg class="navigation__svg">
                   <use xlink:href="images/sprite.svg#header-search-adaptive"></use>
@@ -238,7 +238,7 @@
   <ul class="main-slider__items">
 
     <li class="main-slider__item">
-      <div class="main-slider__wrapper" style="background-image: url(images/slider-1.jpg);">
+      <div class="main-slider__wrapper" style="background-image: url(images/main-slider/slider-1.jpg);">
         <div class="container main-slider__container">
           <div class="main-slider__inner">
             <h3 class="main-slider__title">
@@ -248,14 +248,14 @@
             <div class="main-slider__text">
               <p>Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
             </div>
-            <a class="btn btn--slider" href="#">Купить сейчас</a>
+            <a class="btn" href="#">Купить сейчас</a>
           </div>
         </div>
       </div>
     </li>
 
     <li class="main-slider__item">
-      <div class="main-slider__wrapper" style="background-image: url(images/slider-2.jpg);">
+      <div class="main-slider__wrapper" style="background-image: url(images/main-slider/slider-2.jpg);">
         <div class="container main-slider__container">
           <div class="main-slider__inner">
             <h3 class="main-slider__title">
@@ -265,21 +265,21 @@
             <div class="main-slider__text">
               <p>Только с 12 по 15 июля скидка на домашние помидорчики</p>
             </div>
-            <a class="btn btn--slider" href="#">Купить сейчас</a>
+            <a class="btn" href="#">Купить сейчас</a>
           </div>
         </div>
       </div>
     </li>
 
     <li class="main-slider__item">
-      <div class="main-slider__wrapper" style="background-image: url(images/slider-3.jpg);">
+      <div class="main-slider__wrapper" style="background-image: url(images/main-slider/slider-3.jpg);">
         <div class="container main-slider__container">
           <div class="main-slider__inner">
             <h3 class="main-slider__title">
               пусть остальные позеленеют от зависти
               <span class="main-slider__subtitle">распродажа зелени</span>
             </h3>
-            <a class="btn btn--slider" href="#">Купить сейчас</a>
+            <a class="btn" href="#">Купить сейчас</a>
           </div>
         </div>
       </div>
@@ -627,32 +627,32 @@
       </li>
 
     </ul>
-    <button class="btn btn--products" type="button">Показать ещё</button>
+    <button class="btn btn--white" type="button">Показать ещё</button>
   </div>
 </section>
   <section class="banners section">
   <h2 class="sr-only">Скорее за покупками</h2>
   <div class="container">
-    <ul class="banners__items">
-      <li class="banners__item banners__item--big" style="background-image: url(images/banners/1.jpg);">
-        <article class="banners-article">
-          <span class="banners-article__subtitle">свежайшие фрукты</span>
-          <h3 class="banners-article__title">начни фруктовое лето всего от 99 ₽</h3>
-          <a class="banners-article__link" href="#">перейти к покупкам</a>
+    <ul class="banners__items"> 
+      <li class="banners__item banners__item--big">
+        <article class="banner-card banner-card--big" style="background-image: url(images/banners/1.jpg);">
+          <span class="banner-card__subtitle">свежайшие фрукты</span>
+          <h3 class="banner-card__title">начни фруктовое лето всего от 99 ₽</h3>
+          <a class="banner-card__link" href="#">перейти к покупкам</a>
         </article>
       </li>
-      <li class="banners__item" style="background-image: url(images/banners/2.jpg);">
-        <article class="banners-article">
-          <span class="banners-article__subtitle">сезонная распродажа</span>
-          <h3 class="banners-article__title">овощепад до -50%</h3>
-          <a class="banners-article__link" href="#">перейти к покупкам</a>
+      <li class="banners__item">
+        <article class="banner-card" style="background-image: url(images/banners/2.jpg);">
+          <span class="banner-card__subtitle">сезонная распродажа</span>
+          <h3 class="banner-card__title">овощепад до -50%</h3>
+          <a class="banner-card__link" href="#">перейти к покупкам</a>
         </article>
       </li>
-      <li class="banners__item" style="background-image: url(images/banners/3.jpg);">
-        <article class="banners-article">
-          <span class="banners-article__subtitle">ням-ням</span>
-          <h3 class="banners-article__title">свежий хлебчик</h3>
-          <a class="banners-article__link" href="#">перейти к покупкам</a>
+      <li class="banners__item">
+        <article class="banner-card" style="background-image: url(images/banners/3.jpg);">
+          <span class="banner-card__subtitle">ням-ням</span>
+          <h3 class="banner-card__title">свежий хлебчик</h3>
+          <a class="banner-card__link" href="#">перейти к покупкам</a>
         </article>
       </li>
     </ul>
@@ -942,37 +942,37 @@
     <ul class="brands__items">
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/sprite.svg" alt="логотип спрайт"  width="80" height="60">
+          <img class="brands__img" src="images/brands/sprite.svg" alt="спрайт"  width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/pepper.svg" alt="логотип pepper" width="80" height="60">
+          <img class="brands__img" src="images/brands/pepper.svg" alt="pepper" width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/cocacola.svg" alt="логотип cocacola" width="80" height="60">
+          <img class="brands__img" src="images/brands/cocacola.svg" alt="cocacola" width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/pepsi.svg" alt="логотип pepsi" width="80" height="60">
+          <img class="brands__img" src="images/brands/pepsi.svg" alt="pepsi" width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/redbull.svg" alt="логотип redbull" width="80" height="60">
+          <img class="brands__img" src="images/brands/redbull.svg" alt="redbull" width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/fanta.svg" alt="логотип fanta" width="80" height="60">
+          <img class="brands__img" src="images/brands/fanta.svg" alt="fanta" width="80" height="60">
         </a>
       </li>
       <li class="brands__item">
         <a class="brands__link" href="#" target="_blank">
-          <img class="brands__img" src="images/brands/fanta.svg" alt="логотип fanta" width="80" height="60">
+          <img class="brands__img" src="images/brands/fanta.svg" alt="fanta" width="80" height="60">
         </a>
       </li>
     </ul>
@@ -982,7 +982,7 @@
   <div class="container">
     <div class="news__top">
       <h2 class="title">Наши новости</h2>
-      <a class="news__link" href="#">Все новости</a>
+      <a class="news__top-link" href="#">Все новости</a>
     </div>
     <ul class="news__items">
       <li class="news__item">
@@ -993,7 +993,7 @@
               </time>
             <img class="news__img" src="images/news/1.jpg" width="410" height="240" alt="клубника">
           </div>
-          <a class="news__item-link" href="#">
+          <a class="news__link" href="#">
             Событие этого лета: распродажа сезонных фруктов в онлайн-маркете ФрешОК. Торопись, пока всё не разобрали!
           </a>
       </li>
@@ -1005,7 +1005,7 @@
             </time>
             <img class="news__img" src="images/news/2.jpg" width="410" height="240" alt="клубника">
           </div>
-          <a class="news__item-link" href="#">
+          <a class="news__link" href="#">
             Шикарнейший выбор манго в нашем онлайн-маркете
           </a>
       </li>
@@ -1017,7 +1017,7 @@
             </time>
             <img class="news__img" src="images/news/3.jpg" width="410" height="240" alt="клубника">
           </div>
-          <a class="news__item-link" href="#">
+          <a class="news__link" href="#">
             Всё, что вы хотели знать о папайя
           </a>
       </li>
@@ -1035,7 +1035,7 @@
         <label class="subscribe-form__label" for="subscribe">Следите за нашими акциями</label>
         <div class="subscribe-form__inner">
           <input class="subscribe-form__field" id="subscribe" name="subscribe-email" type="email" placeholder="email@email.com" required>
-          <button class="footer__btn btn" type="submit">Подписаться</button>
+          <button class="subscribe-form__btn btn" type="submit">Подписаться</button>
         </div>
       </form>
       <nav class="footer__navigation">

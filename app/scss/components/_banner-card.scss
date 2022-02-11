@@ -1,0 +1,109 @@
+.banner-card {
+  @extend %background-image;
+  @extend %flex-column;
+  max-width: 100%;
+  height: 100%;
+  padding: 76px 34px;
+  border-radius: 4px;
+  @include r($desktop){
+    margin-bottom: 30px;
+  }
+  @include r($tablet-1){
+    padding: 76px 30px 30px 15px;
+  }
+
+  &--big {
+    color: $white;
+    width: 100%;
+
+    .banner-card {
+      max-width: 100%;
+    }
+
+    .banner-card__subtitle {
+      text-shadow: 1px 1px 0 rgba($black, 0.25);
+    }
+
+    .banner-card__title {
+      text-shadow: 2px 2px 0 rgba($black, 0.25);
+      max-width: 350px;
+      @include r($desktop){
+        max-width: 260px;
+      }
+    }
+
+    .banner-card__link {
+      text-shadow: 1px 1px 0 rgba($black, 0.25);
+
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 18px;
+    letter-spacing: 0.1em;
+    @include r($desktop){
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title {
+    font-family: $ruda;
+    font-weight: $fw-600;
+    font-size: 30px;
+    margin-bottom: 12px;
+    @include line-clamp(3);
+    max-width: 200px;
+    @include r($desktop){
+      font-size: 26px;
+      max-width: 150px;
+    }
+    @include r($tablet-1){
+      font-size: 24px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-top: auto;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    padding-bottom: 7px;
+    align-self: flex-start;
+    border-radius: 3px;
+    transition: color 0.3s, box-shadow 0.3s;
+
+    &::after {
+      @extend %absolute-pseudo;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $dark500;
+      left: 0;
+      transition: background-color 0.3s;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $white100;
+      color: inherit;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      color: $green900;
+
+      &::after {
+        background-color: $green900;
+      }
+    }
+  }
+}

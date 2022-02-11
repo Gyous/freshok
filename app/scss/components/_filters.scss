@@ -5,22 +5,33 @@
   margin-bottom: 48px;
   text-align: center;
   flex-wrap: wrap;
+  @include r($tablet){
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
 
   &__item {
+    @include r($tablet){
+      padding: 0 15px;
+    }
     &:not(:last-child) {
       margin-right: 26px;
+      @include r($tablet){
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 
   &__btn {
     position: relative;
-    font-weight: 700;
+    font-weight: $fw-700;
     letter-spacing: 0.01em;
     color: $dark500;
     text-transform: uppercase;
     padding-bottom: 3px;
     border-radius: 3px;
-    @extend %transition;
+    transition: color 0.3s, box-shadow 0.3s;
 
     &::before {
       @extend %absolute-pseudo;
@@ -50,21 +61,5 @@
 .mixitup-control-active {
   &::before {
     background-color: $green200;
-  }
-}
-
-@include r(1000) {
-  .products-filters {
-    margin-bottom: 6px;
-    font-size: 14px;
-
-    &__item {
-      padding: 0 15px;
-    }
-
-    &__item:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
   }
 }

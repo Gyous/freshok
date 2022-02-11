@@ -3,6 +3,18 @@
   padding: 32px 0 24px;
   color: $white;
   font-size: 14px;
+  @include r($tablet){
+    padding: 24px 0;
+  }
+  @include r($phone){
+    text-align: center;
+  }
+
+  .logo__img{
+    @include r($tablet){
+      display: block;
+    }
+  }
 
   &__logo {
     margin-bottom: 23px;
@@ -11,32 +23,55 @@
 
   &__top {
     @extend %flex-between;
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    @include r($tablet){
+      flex-direction: column;
+      margin: 0 -15px;
+      padding-bottom: 24px;
+    }
   }
 
-  &__btn {
-    border-radius: 0 6px 6px 0;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 16px;
-    padding: 14px 16px;
+  &__navigation{
+    @include r($tablet){
+      border-bottom: 1px solid rgba($white, 0.1);
+    }
   }
 
   &__list {
     column-count: 3;
     column-gap: 75px;
     column-width: 130px;
+    @include r($tablet){
+      padding: 24px 15px;
+    }
+    @include r($phone){
+      text-align: left;
+      max-width: 300px;
+      margin: 0 auto;
+      column-count: 2;
+      column-width: 110px;
+      column-gap: 42px;
+      padding: 21px 0 9px;
+    }
   }
 
   &__item {
     margin-bottom: 19px;
+    @include r($phone){
+      margin-bottom: 12px;
+      width: 100%;
+      margin-left: 31px;
+    }
   }
 
   &__link {
-    @extend %transition;
+    transition: color 0.3s, box-shadow 0.3s;
     border-radius: 3px;
     line-height: 1;
     display: inline-block;
+    @include r($tablet){
+      padding: 6px 0;
+    }
 
     &:hover,
     &:focus {
@@ -56,171 +91,125 @@
   &__wrapper {
     @extend %flex-between;
     align-items: center;
+    @include r($phone){
+      flex-direction: column;
+    }
   }
 
   &__copy {
     text-transform: uppercase;
-  }
-}
-
-.subscribe-form {
-  @extend %flex-column;
-  max-width: 306px;
-  width: 100%;
-  margin-right: 70px;
-
-  &__label {
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-
-  &__inner {
-    display: flex;
-  }
-
-  &__field {
-    max-width: 181px;
-    border-radius: 6px 0 0 6px;
-    background-color: $white;
-    padding: 12px 13px 12px 12px;
-    color: $dark200;
-
-    &::placeholder {
-      transition: color 0.3s;
-    }
-
-    &:hover::placeholder {
-      color: $green400;
+    @include r($phone){
+      margin-top: 24px;
+      order: 1;
     }
   }
-}
-
-.cards {
-  display: flex;
-
-  &__item:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  &__link {
-    border-radius: 3px;
-    width: 93px;
-    height: 30px;
-    @extend %transition;
-    @extend %background-image;
-    display: block;
-
-    &:focus {
-      box-shadow: 0 0 0 3px $white100;
-    }
-
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:active {
-      box-shadow: none;
-      opacity: 1;
-      filter: invert(20%) sepia(80%) saturate(100%) hue-rotate(41deg) brightness(104%) contrast(86%);
-    }
-
-    &--small {
-      width: 49px;
-    }
-  }
-}
-
-@include r(1000) {
-  .footer {
-    padding: 24px 0;
-
-    &__top {
-      flex-direction: column;
-      margin: 0 -15px;
-      padding-bottom: 24px;
-    }
-
-    &__navigation {
-      border-bottom: 1px solid rgba($white, 0.1);
-    }
-
-    &__list {
-      padding: 24px 15px;
-    }
-
-    &__link {
-      padding: 6px 0;
-    }
-
-    .address {
+  .address{
+    @include r($tablet){
       order: -1;
       padding: 0 15px 24px;
       border-bottom: 1px solid rgba($white, 0.1);
       max-width: 100%;
-
-      &__info {
+    }
+    &__info{
+      @include r($tablet){
         margin-bottom: 17px;
       }
     }
-
-    .subscribe-form {
+  }
+  .subscribe-form {
+    @extend %flex-column;
+    max-width: 306px;
+    width: 100%;
+    margin-right: 70px;
+    @include r($tablet){
       order: 1;
       padding: 24px 15px 0;
       max-width: 100%;
       margin-right: 0;
     }
-
-    .logo__img {
-      display: block;
-    }
-  }
-}
-
-@include r(468) {
-  .footer {
-    text-align: center;
-
-    &__list {
-      text-align: left;
-      max-width: 300px;
-      margin: 0 auto;
-      column-count: 2;
-      column-width: 110px;
-      column-gap: 42px;
-      padding: 21px 0 9px;
-    }
-
-    &__item {
-      margin-bottom: 12px;
-      width: 100%;
-      margin-left: 31px;
-    }
-
-    &__btn {
-      padding: 14px;
-    }
-
-    &__wrapper {
-      flex-direction: column;
-    }
-
-    &__copy {
-      margin-top: 24px;
-      order: 1;
-    }
-
-    .socials {
-      justify-content: center;
-    }
-
-    .subscribe-form {
+    @include r($phone){
       text-align: left;
       max-width: 300px;
       align-self: center;
       padding: 24px 0 0;
-
-      &__inner {
+    }
+  
+    &__label {
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+  
+    &__inner {
+      display: flex;
+      @include r($phone){
         justify-content: center;
+      }
+    }
+  
+    &__field {
+      max-width: 181px;
+      width: 100%;
+      border-radius: 6px 0 0 6px;
+      background-color: $white;
+      padding: 12px 13px 12px 12px;
+      color: $dark200;
+  
+      &::placeholder {
+        transition: color 0.3s;
+      }
+  
+      &:hover::placeholder {
+        color: $green400;
+      }
+    }
+  
+    &__btn{
+      border-radius: 0 6px 6px 0;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 14px 16px;
+      @include r($phone){
+        padding: 14px;
+      }
+    }
+  }
+  .socials{
+    @include r($phone){
+      justify-content: center;
+    }
+  }
+  .cards {
+    display: flex;
+  
+    &__item:not(:last-child) {
+      margin-right: 24px;
+    }
+  
+    &__link {
+      border-radius: 3px;
+      width: 93px;
+      height: 30px;
+      transition: box-shadow 0.3s, opacity 0.3s, filter 0.3s;
+      @extend %background-image;
+      display: block;
+  
+      &:focus {
+        box-shadow: 0 0 0 3px $white100;
+      }
+  
+      &:hover {
+        opacity: 0.7;
+      }
+  
+      &:active {
+        box-shadow: none;
+        opacity: 1;
+        filter: invert(20%) sepia(80%) saturate(100%) hue-rotate(41deg) brightness(104%) contrast(86%);
+      }
+  
+      &--small {
+        width: 49px;
       }
     }
   }

@@ -8,12 +8,12 @@
 
   &__link {
     @extend %background-image;
-    @extend %transition;
     background-size: contain;
     border-radius: 3px;
     width: 32px;
     height: 32px;
     display: block;
+    transition: box-shadow 0.3s, opacity 0.3s, filter 0.3s;
 
     &:focus {
       box-shadow: 0 0 0 3px $white100;
