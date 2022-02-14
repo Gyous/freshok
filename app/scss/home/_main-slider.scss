@@ -4,17 +4,17 @@
     height: 600px;
     padding: 142px 0;
 
-    @include r($tablet) {
+    @include r($lg) {
       height: 500px;
       padding: 90px 0;
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       height: 430px;
       padding: 70px 0;
     }
 
-    @include r($tablet-2) {
+    @include r($sm) {
       height: 360px;
       padding: 60px 0;
     }
@@ -25,7 +25,7 @@
   }
 
   &__container {
-    @include r($tablet-2) {
+    @include r($sm) {
       margin: 0 -15px;
     }
   }
@@ -37,11 +37,11 @@
     border-radius: 4px;
     background-color: rgba($white, 0.80);
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       padding: 20px;
     }
 
-    @include r($tablet-2) {
+    @include r($sm) {
       padding: 15px;
     }
   }
@@ -57,17 +57,17 @@
     line-height: 78px;
     @include line-clamp(3);
 
-    @include r($tablet) {
+    @include r($lg) {
       font-size: 52px;
       line-height: 58px;
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       font-size: 44px;
       line-height: 50px;
     }
 
-    @include r($tablet-2) {
+    @include r($sm) {
       font-size: 36px;
       line-height: 40px;
       margin-bottom: 15px;
@@ -90,7 +90,7 @@
   &__text {
     margin-bottom: 32px;
 
-    @include r($tablet-2) {
+    @include r($sm) {
       margin-bottom: 24px;
     }
   }
@@ -98,9 +98,9 @@
   .btn {
     align-self: flex-start;
 
-    @include r($tablet-2) {
+    @include r($sm) {
       font-size: 14px;
-      padding: 12px 24px;
+      padding: 12px 28px;
     }
   }
 
@@ -180,7 +180,7 @@
       border: 1px solid $silver600;
       font-size: 0;
 
-      @include r($tablet-2) {
+      @include r($sm) {
         width: 10px;
         height: 10px;
       }

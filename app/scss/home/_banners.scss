@@ -13,7 +13,7 @@
       grid-gap: 14px;
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
@@ -21,6 +21,7 @@
   &__item {
     max-width: 300px;
     color: $dark500;
+
     &:last-child {
       @include r($desktop) {
         grid-column: span 3;
@@ -36,7 +37,7 @@
       max-width: 100%;
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       grid-column-start: span 3;
       background-position: 18% top;
     }

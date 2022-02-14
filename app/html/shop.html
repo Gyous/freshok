@@ -10,12 +10,147 @@ title: "Фрешок | Страница каталога"
     <div class="container">
       <h2 class="shop__title">Каталог товаров</h2>
       <div class="shop__inner">
-        <div class="shop__filter"></div>
-
-
+        <div class="shop__filter">
+          <button class="shop__filter-btn--close">
+            <span class="sr-only">закрыть меню фильтров</span>
+            <svg class="shop__filter-icon">
+              <use xlink:href="images/sprite.svg#shop-close"></use>
+            </svg>
+          </button>
+          <div class="filter-category shop__filter-item">
+            <h3 class="shop__filter-title">Категории</h3>
+            <ul class="shop__filter-content filter-category__list filter-category__list--active">
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Овощи и фрукты</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Бакалея</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Молочные продукты</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Хлеб</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Мясо</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Колбаса</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Рыба</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Алкоголь</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Напитки</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Торты</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Мясо</a>
+              </li>
+              <li class="filter-category__item">
+                <a class="filter-category__link" href="#">Чай, кофе</a>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-offer shop__filter-item">
+            <h3 class="shop__filter-title">Предложения</h3>
+            <form class="shop__filter-content filter-offer__form filter-offer__form--active" action="#">
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="sale" name="sale">
+                <label class="filter-offer__choice" for="sale">
+                  Со скидкой
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="new" name="new" checked>
+                <label class="filter-offer__choice" for="new">
+                  Новинка
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="hit" name="hit">
+                <label class="filter-offer__choice" for="hit">
+                  Хит
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="filter-brand shop__filter-item">
+            <h3 class="shop__filter-title">Бренд</h3>
+            <form class="shop__filter-content filter-offer__form filter-offer__form--active" action="#">
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="cocacola" name="cocacola">
+                <label class="filter-offer__choice" for="cocacola">
+                  CocaCola
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="pepsi" name="pepsi">
+                <label class="filter-offer__choice" for="pepsi">
+                  Pepsi
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="sprite" name="sprite">
+                <label class="filter-offer__choice" for="sprite">
+                  Sprite
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="fanta" name="fanta">
+                <label class="filter-offer__choice" for="fanta">
+                  Fanta
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="redBull" name="redBull">
+                <label class="filter-offer__choice" for="redBull">
+                  RedBull
+                </label>
+              </div>
+              <div class="filter-offer__item">
+                <input class="filter-offer__input" type="checkbox" id="pepper" name="pepper">
+                <label class="filter-offer__choice" for="pepper">
+                  Dr Pepper
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="filter-price shop__filter-item">
+            <h3 class="shop__filter-title">Цена</h3>
+            <form class="filter-price__form shop__filter-content filter-price__form--active" action="#">
+              <div class="filter-price__inner">
+                <div class="filter-price__item">
+                  <label class="sr-only" for="priceFrom">Фильтр цены от</label>
+                  от
+                  <input class="filter-price__text input-from" id="priceFrom" name="priceFrom" type="number" value="0">
+                  <span>₽</span>
+                </div>
+                <div class="filter-price__item">
+                  <label class="sr-only" for="priceTo">Фильтр цены до</label>
+                  до
+                  <input class="filter-price__text input-to" id="priceTo" name="priceTo" type="number" value="0">
+                  <span>₽</span>
+                </div>
+              </div>
+              <label class="filter-price__label" for="priceBar"></label>
+              <input class="filter-price__bar" id="priceBar" name="priceBar" data-min="0" data-max="1100"
+                data-from="100" data-to="1000"></input>
+            </form>
+          </div>
+        </div>
 
         <div class="shop__content">
           <div class="shop__content-top">
+            <button class="shop__content-btn shop__content-btn--adaptive" type="button">
+              <span class="sr-only">открыть меню фильтров</span>
+            </button>
             <form class="shop__content-form" action="#">
               <label class="sr-only" for="sort">сортировка товара</label>
               <select class="shop__content-sort" name="sort" id="sort">
@@ -90,8 +225,8 @@ title: "Фрешок | Страница каталога"
                         <use xlink:href="images/sprite.svg#icon-basket"></use>
                       </svg>
                     </button>
-                </div>
-                
+                  </div>
+
                 </div>
               </article>
             </li>
@@ -159,8 +294,11 @@ title: "Фрешок | Страница каталога"
                   </h3>
                   <div class="product-card__bottom">
                     <div class="product-card__prices">
+                      <span class="product-card__price product-card__price--old">
+                        1999 <span>₽</span>
+                      </span>
                       <span class="product-card__price">
-                        1019 <span>₽</span>
+                        999 <span>₽</span>
                       </span>
                     </div>
                     <button class="product-card__basket btn">
@@ -171,7 +309,7 @@ title: "Фрешок | Страница каталога"
                     </button>
                   </div>
                 </div>
-                
+
               </article>
             </li>
             <li class="shop-market__item">

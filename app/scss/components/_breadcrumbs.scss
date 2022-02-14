@@ -1,18 +1,22 @@
-.breadcrumbs{
+.breadcrumbs {
   background-color: $silver100;
   padding: 24px 0;
-  &__list{
+
+  &__list {
     display: flex;
     line-height: 1.2;
     font-size: 14px;
   }
-  &__item{
+
+  &__item {
     position: relative;
     letter-spacing: 0.03em;
     padding-right: 11px;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-right: 6px;
-      &::after{
+
+      &::after {
         @extend %absolute-pseudo;
         width: 6px;
         height: 10px;
@@ -26,21 +30,27 @@
       }
     }
   }
-  &__link{
+
+  &__link {
     transition: color 0.3s, box-shadow 0.3s;
     border-radius: 3px;
-    &:hover{
+
+    &:hover {
       color: $green900;
     }
-    &:focus{
+
+    &:focus {
       box-shadow: 0 0 0 4px $green200;
     }
-    &--disabled{
+
+    &--disabled {
       cursor: auto;
-      &:hover{
+
+      &:hover {
         color: inherit;
       }
-      &:focus{
+
+      &:focus {
         box-shadow: none;
       }
     }

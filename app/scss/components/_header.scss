@@ -7,7 +7,8 @@
     text-transform: uppercase;
     padding: 16px 0;
     letter-spacing: 0.02em;
-    @include r($tablet-1){
+
+    @include r($tablet) {
       padding: 14px 0
     }
   }
@@ -24,7 +25,8 @@
   &__item {
     &:not(:last-child) {
       margin-right: 53px;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         margin-right: 29px;
       }
     }
@@ -36,7 +38,8 @@
     align-items: center;
     border-radius: 3px;
     transition: color 0.3s, box-shadow 0.3s, opacity 0.3s;
-    @include r($tablet-1){
+
+    @include r($tablet) {
       font-size: 0;
       height: 22px;
     }
@@ -66,7 +69,8 @@
 
     &--address {
       padding-left: 47px;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         padding-left: 28px;
       }
 
@@ -78,7 +82,8 @@
 
     &--phone {
       padding-left: 34px;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         padding-left: 20px;
       }
 
@@ -92,7 +97,8 @@
   &__content {
     background-color: $green900;
     padding: 25px 0;
-    @include r($tablet-1){
+
+    @include r($tablet) {
       position: relative;
       padding: 9px 0;
     }
@@ -101,7 +107,8 @@
   &__box {
     display: flex;
     align-items: center;
-    @include r($tablet){
+
+    @include r($lg) {
       justify-content: space-between;
     }
   }
@@ -124,12 +131,13 @@
     margin-right: 24px;
   }
 
-  .btn--black{
-    @include r($tablet-1){
+  .btn--black {
+    @include r($tablet) {
       border-radius: 0;
       padding: 16px 52px;
     }
-    @include r($phone){
+
+    @include r($phone) {
       padding: 16px 29px;
     }
   }
@@ -137,7 +145,8 @@
 
 .menu {
   display: flex;
-  @include r($tablet){
+
+  @include r($lg) {
     display: none;
   }
 
@@ -170,7 +179,8 @@
   width: 100%;
   margin-right: 31px;
   letter-spacing: 0.03em;
-  @include r($tablet){
+
+  @include r($lg) {
     display: none;
   }
 
@@ -296,18 +306,20 @@
   display: flex;
   position: relative;
   margin-right: 44px;
-  @include r($tablet){
+
+  @include r($lg) {
     margin-right: 0;
     max-width: 450px;
     z-index: 5;
   }
-  @include r($tablet-1){
+
+  @include r($tablet) {
     display: none;
     position: absolute;
     bottom: -51px;
     max-width: 100%;
     justify-content: space-between;
-    border: 1px solid #000;
+    border: 1px solid $black;
     left: 0;
   }
 
@@ -322,8 +334,8 @@
     background-image: url('../images/icons/icon-search.svg');
   }
 
-  &--active{
-    @include r($tablet-1){
+  &--active {
+    @include r($tablet) {
       display: flex;
     }
   }
@@ -336,13 +348,15 @@
     position: relative;
     font-size: 14px;
     border-radius: 6px;
-    @include r($tablet-1){
+
+    @include r($tablet) {
       display: none;
     }
 
     &--adaptive {
       display: none;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         display: block;
         border-radius: 0;
         max-width: 100%;
@@ -374,20 +388,22 @@
 
     &--search {
       display: none;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         display: block;
       }
     }
 
-    &:first-child{
-      @include r($tablet-1){
+    &:first-child {
+      @include r($tablet) {
         display: none;
       }
     }
 
     &:not(:last-child) {
       margin-right: 12px;
-      @include r($tablet-1){
+
+      @include r($tablet) {
         margin-right: 7px;
       }
     }
@@ -397,7 +413,9 @@
     width: 30px;
     height: 30px;
     transition: fill 0.3s;
-    @include r($tablet-1){
+    fill: $white;
+
+    @include r($tablet) {
       width: 24px;
       height: 24px;
     }
@@ -409,7 +427,8 @@
     border-radius: 3px;
     @extend %flex-center;
     transition: box-shadow 0.3s, background-color 0.3s;
-    @include r($tablet-1){
+
+    @include r($tablet) {
       width: 44px;
       height: 44px;
     }
@@ -450,7 +469,8 @@
   height: 20px;
   position: relative;
   display: none;
-  @include r($tablet){
+
+  @include r($lg) {
     display: block;
   }
 
@@ -487,7 +507,8 @@
   padding: 26px 0 15px;
   color: $dark800;
   font-size: 18px;
-  @include r($tablet){
+
+  @include r($lg) {
     display: block;
   }
 
@@ -506,7 +527,7 @@
     padding: 0 20px 0 15px;
   }
 
-  &__account {
+  &__register {
     position: relative;
     display: flex;
     padding: 11px 15px 11px 55px;
@@ -521,13 +542,13 @@
       height: 32px;
       background-image: url('../images/icons/icon-user.svg');
     }
+  }
 
-    &-item {
-      &:first-child {
-        margin-right: 21px;
-        padding-right: 21px;
-        border-right: 2px solid $white;
-      }
+  &__account {
+    &:first-child {
+      margin-right: 21px;
+      padding-right: 21px;
+      border-right: 2px solid $white;
     }
   }
 
@@ -649,18 +670,4 @@
     }
   }
 
-}
-
-.body {
-  &--active {
-    overflow: hidden;
-
-    &::before {
-      @extend %absolute-pseudo;
-      background-color: rgba($black, 0.15);
-      width: 100%;
-      height: 100%;
-      z-index: 5;
-    }
-  }
 }

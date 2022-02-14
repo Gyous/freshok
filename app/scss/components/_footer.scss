@@ -3,15 +3,17 @@
   padding: 32px 0 24px;
   color: $white;
   font-size: 14px;
-  @include r($tablet){
+
+  @include r($lg) {
     padding: 24px 0;
   }
-  @include r($phone){
+
+  @include r($phone) {
     text-align: center;
   }
 
-  .logo__img{
-    @include r($tablet){
+  .logo__img {
+    @include r($lg) {
       display: block;
     }
   }
@@ -24,15 +26,16 @@
   &__top {
     @extend %flex-between;
     padding-bottom: 30px;
-    @include r($tablet){
+
+    @include r($lg) {
       flex-direction: column;
       margin: 0 -15px;
       padding-bottom: 24px;
     }
   }
 
-  &__navigation{
-    @include r($tablet){
+  &__navigation {
+    @include r($lg) {
       border-bottom: 1px solid rgba($white, 0.1);
     }
   }
@@ -41,26 +44,29 @@
     column-count: 3;
     column-gap: 75px;
     column-width: 130px;
-    @include r($tablet){
+
+    @include r($lg) {
       padding: 24px 15px;
     }
-    @include r($phone){
+
+    @include r($phone) {
       text-align: left;
-      max-width: 300px;
+      max-width: 244px;
       margin: 0 auto;
       column-count: 2;
-      column-width: 110px;
-      column-gap: 42px;
+      column-width: auto;
+      column-gap: 110px;
       padding: 21px 0 9px;
     }
   }
 
   &__item {
     margin-bottom: 19px;
-    @include r($phone){
+
+    @include r($phone) {
       margin-bottom: 12px;
       width: 100%;
-      margin-left: 31px;
+      white-space: nowrap;
     }
   }
 
@@ -69,7 +75,8 @@
     border-radius: 3px;
     line-height: 1;
     display: inline-block;
-    @include r($tablet){
+
+    @include r($lg) {
       padding: 6px 0;
     }
 
@@ -91,61 +98,70 @@
   &__wrapper {
     @extend %flex-between;
     align-items: center;
-    @include r($phone){
+
+    @include r($phone) {
       flex-direction: column;
     }
   }
 
   &__copy {
     text-transform: uppercase;
-    @include r($phone){
+
+    @include r($phone) {
       margin-top: 24px;
       order: 1;
     }
   }
-  .address{
-    @include r($tablet){
+
+  .address {
+    @include r($lg) {
       order: -1;
       padding: 0 15px 24px;
       border-bottom: 1px solid rgba($white, 0.1);
       max-width: 100%;
     }
-    &__info{
-      @include r($tablet){
+
+    &__info {
+      @include r($lg) {
         margin-bottom: 17px;
       }
     }
   }
+
   .subscribe-form {
     @extend %flex-column;
     max-width: 306px;
     width: 100%;
     margin-right: 70px;
-    @include r($tablet){
+
+    @include r($lg) {
       order: 1;
       padding: 24px 15px 0;
       max-width: 100%;
       margin-right: 0;
     }
-    @include r($phone){
+
+    @include r($phone) {
       text-align: left;
       max-width: 300px;
       align-self: center;
       padding: 24px 0 0;
     }
-  
+
     &__label {
       line-height: 1;
       margin-bottom: 16px;
+      letter-spacing: 0.03em;
     }
-  
+
     &__inner {
       display: flex;
-      @include r($phone){
+
+      @include r($phone) {
         justify-content: center;
       }
     }
-  
+
     &__field {
       max-width: 181px;
       width: 100%;
@@ -153,39 +169,42 @@
       background-color: $white;
       padding: 12px 13px 12px 12px;
       color: $dark200;
-  
+
       &::placeholder {
         transition: color 0.3s;
       }
-  
+
       &:hover::placeholder {
         color: $green400;
       }
     }
-  
-    &__btn{
+
+    &__btn {
       border-radius: 0 6px 6px 0;
       text-transform: uppercase;
       font-size: 12px;
       line-height: 16px;
       padding: 14px 16px;
-      @include r($phone){
+
+      @include r($phone) {
         padding: 14px;
       }
     }
   }
-  .socials{
-    @include r($phone){
+
+  .socials {
+    @include r($phone) {
       justify-content: center;
     }
   }
+
   .cards {
     display: flex;
-  
+
     &__item:not(:last-child) {
       margin-right: 24px;
     }
-  
+
     &__link {
       border-radius: 3px;
       width: 93px;
@@ -193,21 +212,21 @@
       transition: box-shadow 0.3s, opacity 0.3s, filter 0.3s;
       @extend %background-image;
       display: block;
-  
+
       &:focus {
         box-shadow: 0 0 0 3px $white100;
       }
-  
+
       &:hover {
         opacity: 0.7;
       }
-  
+
       &:active {
         box-shadow: none;
         opacity: 1;
         filter: invert(20%) sepia(80%) saturate(100%) hue-rotate(41deg) brightness(104%) contrast(86%);
       }
-  
+
       &--small {
         width: 49px;
       }

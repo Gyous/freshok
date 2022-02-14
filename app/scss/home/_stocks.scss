@@ -11,13 +11,13 @@
       &:not(:last-child) {
         margin-right: 32px;
 
-        @include r($tablet-2) {
+        @include r($sm) {
           margin-right: 0;
         }
       }
     }
 
-    @include r($tablet-2) {
+    @include r($sm) {
       margin-bottom: 11px;
     }
   }
@@ -34,15 +34,15 @@
       grid-gap: 15px;
     }
 
-    @include r($tablet) {
+    @include r($lg) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       margin-bottom: 24px;
     }
 
-    @include r($tablet-2) {
+    @include r($sm) {
       grid-template-columns: repeat(1, minmax(auto, 300px));
       justify-content: center;
     }
@@ -63,11 +63,11 @@
       margin-right: 12px;
       margin-bottom: 0;
 
-      @include r($tablet-1) {
+      @include r($tablet) {
         margin-right: 0;
       }
 
-      @include r($tablet-2) {
+      @include r($sm) {
         margin-right: 12px;
       }
 
@@ -78,7 +78,7 @@
     }
 
     &__img {
-      @include r($tablet-1) {
+      @include r($tablet) {
         height: 100px;
       }
     }
@@ -91,7 +91,7 @@
     &__title {
       padding: 0;
 
-      @include r($tablet-1) {
+      @include r($tablet) {
         margin-bottom: 6px;
       }
     }

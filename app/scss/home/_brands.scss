@@ -1,7 +1,7 @@
 .brands {
   padding-bottom: 68px;
 
-  @include r($tablet-1) {
+  @include r($tablet) {
     padding-bottom: 41px;
   }
 
@@ -19,7 +19,7 @@
     opacity: 0.5;
     transition: opacity 0.3s;
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       opacity: 1;
     }
 

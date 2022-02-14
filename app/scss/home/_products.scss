@@ -8,12 +8,12 @@
     grid-auto-rows: 410px;
     margin-bottom: 45px;
 
-    @include r($tablet) {
+    @include r($lg) {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 15px;
     }
 
-    @include r($tablet-1) {
+    @include r($tablet) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       margin-bottom: 24px;
       grid-auto-rows: auto;
