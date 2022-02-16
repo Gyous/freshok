@@ -29,7 +29,7 @@ function svgSprites() {
         $("[stroke]").removeAttr("stroke"); 
         $("[style]").removeAttr("style"); 
     },
-    parserOptions: { xmlMode: true },
+    parserOptions: { xmlMode: true},
   })
 )
   .pipe(replace('&gt;','>'))
