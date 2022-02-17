@@ -1,9 +1,9 @@
 @import 'reset';
 @import 'fonts';
 @import 'vars';
-@import 'global';
-@import 'libs';
 @import 'mixin';
+@import 'libs';
+@import 'global';
 
 
 // Home
@@ -20,15 +20,19 @@
 
 // Остальные компоненты
 @import 'components/benefits';
-@import 'components/filters';
+@import 'components/products-filters';
 @import 'components/product-card';
 @import 'components/banner-card';
 @import 'components/address';
 @import 'components/socials';
+@import 'components/breadcrumbs';
+@import 'components/filters-category';
+@import 'components/pagination';
 
 //страница каталога
-@import 'components/breadcrumbs';
 @import 'shop';
+@import 'components/shopt-top';
+@import 'components/shop-market';
 
 //страница описания товара
 @import 'product-page'

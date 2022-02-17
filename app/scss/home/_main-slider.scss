@@ -104,63 +104,6 @@
     }
   }
 
-  &__arrow {
-    position: absolute;
-    transition: box-shadow 0.3s, background-color 0.3s;
-    @extend %absolute-top-trasform;
-    z-index: 50;
-    padding: 12px 20px;
-    background-color: rgba($white, 0.80);
-    border-radius: 6px;
-    line-height: 1;
-
-    &--prev {
-      left: 60px;
-    }
-
-    &--next {
-      right: 60px;
-    }
-
-    &:hover {
-      background-color: $green200;
-
-      .slick-arrow__svg {
-        fill: $green900;
-      }
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($green400, 0.5);
-
-      .slick-arrow__svg {
-        fill: $dark500;
-      }
-    }
-
-    &:active {
-      background-color: rgba($white, 0.80);
-      box-shadow: none;
-
-      .slick-arrow__svg {
-        fill: $green900;
-      }
-    }
-  }
-
-  &__svg {
-    transition: fill 0.3s;
-    width: 19px;
-    height: 32px;
-    fill: $dark500;
-  }
-
-  .slick-disabled {
-    .slick-arrow__svg {
-      fill: $silver600;
-    }
-  }
-
   .slick-dots {
     display: flex;
     left: 50%;

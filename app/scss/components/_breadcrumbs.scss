@@ -26,7 +26,8 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url('../images/icons/breadcrumbs-arrow.svg');
+        background-image: url('../images/sprite.svg#breadcrumbs-arrow');
+        filter: invert(96%) sepia(0%) saturate(7045%) hue-rotate(22deg) brightness(87%) contrast(74%);
       }
     }
   }
@@ -35,12 +36,12 @@
     transition: color 0.3s, box-shadow 0.3s;
     border-radius: 3px;
 
-    &:hover {
-      color: $green900;
-    }
-
     &:focus {
       box-shadow: 0 0 0 4px $green200;
+    }
+
+    &:hover {
+      color: $green900;
     }
 
     &--disabled {

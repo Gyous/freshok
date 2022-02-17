@@ -1,0 +1,136 @@
+<section class="shop__filter">
+  <h2 class="sr-only">Фильтры интернет-магазина</h2>
+  <button class="shop__btn">
+    <span class="sr-only">Закрыть меню фильтров</span>
+    <svg class="shop__icon">
+      <use xlink:href="images/sprite.svg#shop-close"></use>
+    </svg>
+  </button>
+  <div class="filter-category filter-item">
+    <h3 class="filter-item__title">Категории</h3>
+    <ul class="filter-category__list filter-item__list filter-item__list--active">
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Овощи и фрукты</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Бакалея</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Молочные продукты</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Хлеб</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Мясо</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Колбаса</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Рыба</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Алкоголь</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Напитки</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Торты</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Мясо</a>
+      </li>
+      <li class="filter-category__item">
+        <a class="filter-category__link" href="#">Чай, кофе</a>
+      </li>
+    </ul>
+  </div>
+  <div class="filter-offer filter-item">
+    <h3 class="filter-item__title">Предложения</h3>
+    <form class="filter-offer__form filter-item__list filter-item__list--active" action="#">
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="sale" name="sale">
+        <label class="filter-offer__choice" for="sale">
+          Со скидкой
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="new" name="new" checked>
+        <label class="filter-offer__choice" for="new">
+          Новинка
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="hit" name="hit">
+        <label class="filter-offer__choice" for="hit">
+          Хит
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="filter-brand filter-item">
+    <h3 class="filter-item__title">Бренд</h3>
+    <form class="filter-offer__form filter-item__list filter-item__list--active" action="#">
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="cocacola" name="cocacola">
+        <label class="filter-offer__choice" for="cocacola">
+          CocaCola
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="pepsi" name="pepsi">
+        <label class="filter-offer__choice" for="pepsi">
+          Pepsi
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="sprite" name="sprite">
+        <label class="filter-offer__choice" for="sprite">
+          Sprite
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="fanta" name="fanta">
+        <label class="filter-offer__choice" for="fanta">
+          Fanta
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="redBull" name="redBull">
+        <label class="filter-offer__choice" for="redBull">
+          RedBull
+        </label>
+      </div>
+      <div class="filter-offer__item">
+        <input class="filter-offer__input" type="checkbox" id="pepper" name="pepper">
+        <label class="filter-offer__choice" for="pepper">
+          Dr Pepper
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="filter-price filter-item">
+    <h3 class="filter-item__title">Цена</h3>
+    <form class="filter-price__form filter-item__list filter-item__list--active" action="#">
+      <div class="filter-price__inner">
+        <div class="filter-price__item">
+          <label class="sr-only" for="priceFrom">Фильтр цены от</label>
+          от
+          <input class="filter-price__text input-from" id="priceFrom" name="priceFrom" type="number" value="0">
+          <span>₽</span>
+        </div>
+        <div class="filter-price__item">
+          <label class="sr-only" for="priceTo">Фильтр цены до</label>
+          до
+          <input class="filter-price__text input-to" id="priceTo" name="priceTo" type="number" value="0">
+          <span>₽</span>
+        </div>
+      </div>
+      <label class="filter-price__label" for="priceBar"></label>
+      <input class="filter-price__bar" id="priceBar" name="priceBar" data-min="0" data-max="1100" data-from="100"
+        data-to="1000">
+    </form>
+  </div>
+</section>

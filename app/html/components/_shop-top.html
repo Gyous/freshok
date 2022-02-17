@@ -1,0 +1,36 @@
+<section class="shop__top">
+    <h2 class="sr-only">сортировка товаров</h2>
+    <button class="shop__top-btn shop__top-btn--adaptive" type="button">
+      <span class="sr-only">открыть меню фильтров</span>
+    </button>
+    <form class="shop__form" action="#">
+      <label class="sr-only" for="sort">сортировка товара</label>
+      <select class="shop__sort" name="sort" id="sort">
+        <option value="">По названию</option>
+        <option value="">По популярности</option>
+        <option value="">Сначала дешевые</option>
+        <option value="">Сначала дорогие</option>
+        <option value="">По алфавиту</option>
+      </select>
+      <label class="sr-only" for="sortNum">сортировка товара</label>
+      <select class="shop__sort" name="sortNum" id="sortNum">
+        <option value="">по 12</option>
+        <option value="">по 18</option>
+        <option value="">по 24</option>
+        <option value="">по 30</option>
+        <option value="">по 36</option>
+      </select>
+    </form>
+    <button class="shop__top-btn shop__top-btn--list" type="button">
+      <span class="sr-only">вид меню - список</span>
+      <svg class="shop__top-icon">
+        <use href="images/sprite.svg#catalog-list"></use>
+      </svg>
+    </button>
+    <button class="shop__top-btn shop__top-btn--grid shop__top-btn--active" type="button">
+      <span class="sr-only">вид меню - сетка</span>
+      <svg class="shop__top-icon">
+        <use href="images/sprite.svg#catalog-grid"></use>
+      </svg>
+    </button>
+  </section>

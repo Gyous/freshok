@@ -1,0 +1,153 @@
+.shop {
+
+  &__top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 46px;
+
+    @include r($desktop) {
+      justify-content: flex-start;
+    }
+
+    @include r($tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sort {
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-right: 16px;
+
+    @include r($tablet) {
+      margin-right: 10px;
+    }
+  }
+
+  .jq-selectbox {
+    &__select {
+      padding: 15px 42px 15px 11px;
+      border: 1px solid $silver600;
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+
+      @include r($sm) {
+        font-size: 12px;
+        padding: 16px 25px 16px 7px;
+      }
+    }
+
+    &__select-text {
+      width: 100%;
+    }
+
+    &__trigger {
+      @extend %absolute-top-trasform;
+      position: absolute;
+      right: 15px;
+
+      @include r($sm) {
+        right: 9px;
+      }
+    }
+
+    &__trigger-arrow {
+      background-image: url(../images/icons/arrow-sort.svg);
+      width: 11px;
+      height: 6px;
+      @extend %background-image;
+    }
+
+    &__dropdown {
+      background-color: $white;
+      border-radius: 0 0 6px 6px;
+      border: 1px solid $silver600;
+      width: 100%;
+    }
+
+    li {
+      padding: 7px 9px;
+
+      &:hover {
+        background-color: $green400;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+
+    .selected {
+      background-color: $green400;
+      color: $white;
+    }
+  }
+
+  &__top-btn {
+    background-color: $silver100;
+    width: 47px;
+    height: 47px;
+    border-radius: 3px;
+    padding: 6px;
+    transition: box-shadow 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include r($tablet) {
+        margin-right: 10px;
+      }
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green200;
+    }
+
+    &:hover {
+      .shop__top-icon {
+        fill: $green400;
+      }
+    }
+
+    &--active {
+      .shop__top-icon {
+        fill: $green400;
+      }
+    }
+
+    &--list,
+    &--grid {
+      @include r($desktop) {
+        display: none;
+      }
+    }
+
+    &--adaptive {
+      position: relative;
+      display: none;
+
+      &::before {
+        @extend %absolute-pseudo;
+        @extend %background-image;
+        @extend %absolute-top-trasform;
+        background-size: auto;
+        left: 8px;
+        width: 32px;
+        height: 36px;
+        background-image: url('../images/icons/filter-adaptive.svg');
+      }
+
+      @include r($desktop) {
+        display: block;
+      }
+    }
+  }
+
+  &__top-icon {
+    width: 35px;
+    height: 35px;
+    fill: $silver600;
+    transition: fill 0.3s;
+  }
+
+}

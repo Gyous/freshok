@@ -24,7 +24,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 53px;
+      margin-right: 49px;
 
       @include r($tablet) {
         margin-right: 29px;
@@ -507,6 +507,7 @@
   padding: 26px 0 15px;
   color: $dark800;
   font-size: 18px;
+  z-index: 50;
 
   @include r($lg) {
     display: block;
