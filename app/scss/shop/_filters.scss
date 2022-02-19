@@ -177,31 +177,31 @@
     display: none;
     -webkit-appearance: none;
   }
-}
 
-.irs--flat .irs-line,
-.irs--flat .irs-bar {
-  height: 2px;
-  border-radius: 0;
-}
+  .irs--flat .irs-line,
+  .irs--flat .irs-bar {
+    height: 2px;
+    border-radius: 0;
+  }
 
-.irs-line {
-  background-color: $silver500;
-}
+  .irs-line {
+    background-color: $silver500;
+  }
 
-.irs--flat .irs-bar {
-  background-color: $green400;
-}
+  .irs--flat .irs-bar {
+    background-color: $green400;
+  }
 
-.irs--flat .irs-handle {
-  top: 17px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: $green400;
-  cursor: pointer;
-}
+  .irs--flat .irs-handle {
+    top: 17px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $green400;
+    cursor: pointer;
+  }
 
-.irs--flat .irs-handle>i:first-child {
-  display: none;
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
 }

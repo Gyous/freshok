@@ -1,0 +1,32 @@
+<form class="opinion-form" action="#">
+  <h3 class="opinion-form__title">Оставить отзыв</h3>
+  <div class="opinion-form__rating">
+    <span class="opinion-form__subtitle">Ваша оценка *</span>
+    <div class="opinion-form__stars"></div>
+  </div>
+  <div class="opinion-form__inner">
+    <div class="opinion-form__comment">
+      <label class="opinion-form__subtitle" for="comment">Ваш отзыв *</label>
+      <textarea class="opinion-form__textarea opinion-form__field" name="comment" id="comment" required
+        placeholder="Введите текст отзыва"></textarea>
+    </div>
+    <ul class="opinion-form__data">
+      <li class="opinion-form__item">
+        <label class="opinion-form__subtitle" for="name">Имя</label>
+        <input class="opinion-form__field" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+      </li>
+      <li class="opinon-form__item">
+        <label class="opinion-form__subtitle" for="email">Email *</label>
+        <input class="opinion-form__field" type="email" name="email" id="email" placeholder="youremail@mail.com"
+          required>
+      </li>
+    </ul>
+  </div>
+  <div class="opinion-form__accept">
+    <input class="opinion-form__checkbox" type="checkbox" id="accept" name="accept">
+    <label class="opinion-form__text" for="accept">
+      Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+    </label>
+  </div>
+  <button class="btn btn--green" type="submit">Оставить отзыв</button>
+</form>

@@ -1,0 +1,83 @@
+.slider-window{
+  &__wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 70;
+    background-color: $silver700;
+    padding: 54px 96px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    &:target{
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  &__close{
+    position: absolute;
+    z-index: 50;
+    top: 90px;
+    right: 142px;
+  }
+  &__icon{
+    width: 32px;
+    height: 32px;
+  }
+  &__item{
+    background-color: $white;
+    border-radius: 15px;
+    position: relative;
+    padding: 60px 0 160px;
+    @include h($lg-height){
+      padding: 0;
+      height: calc(100vh - 100px);
+    }
+  }
+  &__box{
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+    height: calc(100vh - 340px);
+    @include h($lg-height){
+      height: calc(100vh - 120px);
+      padding: 40px 0;
+    }
+  }
+  &__img{
+    object-fit: cover;
+    height: 100%;
+  }
+  .slick-dots{
+    position: absolute;
+    bottom: 92px;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    @include h($lg-height){
+      bottom: 5px;
+    }
+    .slick-active{
+      background-color: $green400;
+      border-color: $green400;
+    }
+    li{
+      border-radius: 50%;
+      &:not(:last-child){
+        margin-right: 10px;
+      }
+    }
+    button{
+      width: 20px;
+      height: 20px;
+      border: 1px solid $silver700;
+      background-color: rgba($black, 0.15);
+      border-radius: 50%;
+    }
+  }
+  
+}

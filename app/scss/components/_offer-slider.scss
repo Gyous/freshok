@@ -1,0 +1,45 @@
+.product-offer {
+  padding: 8px 0 46px;
+
+  &__title {
+    margin-bottom: 56px;
+    font-size: 30px;
+  }
+
+  .product-card {
+    height: 410px;
+
+    &__img {
+      height: 215px;
+    }
+  }
+
+  .btn-slider {
+    border: 1px solid $silver600;
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+  }
+
+  .slick--prev,
+  .slick--next {
+    top: -76px;
+  }
+
+  .slick--prev {
+    right: 90px;
+  }
+
+  .slick--next {
+    right: 0;
+  }
+
+  .main-slider__arrow {
+    border: 1px solid $silver600;
+  }
+}

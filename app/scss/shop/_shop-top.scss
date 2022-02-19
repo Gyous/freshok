@@ -54,7 +54,7 @@
     }
 
     &__trigger-arrow {
-      background-image: url(../images/icons/arrow-sort.svg);
+      background-image: url('../images/icons/arrow-sort.svg');
       width: 11px;
       height: 6px;
       @extend %background-image;

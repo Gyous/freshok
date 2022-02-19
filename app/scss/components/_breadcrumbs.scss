@@ -47,12 +47,12 @@
     &--disabled {
       cursor: auto;
 
-      &:hover {
-        color: inherit;
-      }
-
       &:focus {
         box-shadow: none;
+      }
+
+      &:hover {
+        color: inherit;
       }
     }
   }

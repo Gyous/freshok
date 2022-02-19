@@ -9,11 +9,10 @@
   }
 }
 
-@include font-face(OpenSans, OpenSansLight, 300);
-@include font-face(OpenSans, OpenSansRegular, 400);
-@include font-face(OpenSans, OpenSansSemiBold, 600);
-@include font-face(OpenSans, OpenSansBold, 700);
-
+@include font-face(Open-Sans, OpenSansBold, 700);
+@include font-face(Open-Sans, OpenSansSemiBold, 600);
+@include font-face(Open-Sans, OpenSansRegular, 400);
+@include font-face(Open-Sans, OpenSansLight, 300);
 
 @include font-face(Ruda, RudaBlack, 900);
 @include font-face(Ruda, RudaBold, 700);

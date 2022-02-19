@@ -5,7 +5,6 @@
 @import 'libs';
 @import 'global';
 
-
 // Home
 @import 'home/main-slider';
 @import 'home/products';
@@ -18,7 +17,7 @@
 @import 'components/header';
 @import 'components/footer';
 
-// Остальные компоненты
+// Общие компоненты
 @import 'components/benefits';
 @import 'components/products-filters';
 @import 'components/product-card';
@@ -26,13 +25,17 @@
 @import 'components/address';
 @import 'components/socials';
 @import 'components/breadcrumbs';
-@import 'components/filters-category';
 @import 'components/pagination';
+@import 'components/reviews';
+@import 'components/offer-slider';
+@import 'components/product-slider';
 
-//страница каталога
-@import 'shop';
-@import 'components/shopt-top';
-@import 'components/shop-market';
+// Страница каталога
+@import 'shop/shop';
+@import 'shop/filters';
+@import 'shop/shop-top';
 
-//страница описания товара
-@import 'product-page'
+// Страница описания товара
+@import 'product-page/product-page';
+@import 'product-page/opinion-form';
+@import 'product-page/slider-window';

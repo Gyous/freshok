@@ -46,6 +46,10 @@
       &:active {
         box-shadow: none;
       }
+
+      &:hover{
+        border-color: $dark500;
+      }
     }
 
     &--disabled {
