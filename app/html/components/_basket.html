@@ -1,0 +1,134 @@
+<div class="basket">
+  <form class="basket__inner" action="#">
+    <div class="basket__top">
+      <div class="basket__left">
+        <h3 class="basket__title">Корзина </h3>
+        <button class="basket__reset" type="reset">очистить корзину</button>
+      </div>
+      <button class="basket__close" type="button">
+        <svg class="basket__icon">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="basket__list">
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/pineapple.jpg" alt="ананас">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Ананас, 1 кг</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      999<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  1998<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/dragon-fruit.jpg" alt="Питахайя">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Питахайя красная с белой мякотью, 1шт</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      1019<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  2038<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/paprik.jpg" alt="Питахайя">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Перец оранжевый, 1кг</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      349<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  349<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <div class="basket__bottom">
+      <label class="basket__summ" for="sum">
+        Товаров на сумму
+        <span class="basket__price">
+          2038<span class="basket__currency">₽</span>
+        </span>
+      </label>
+      <button class="basket__btn" type="button">Оформить заказ</button>
+    </div>
+  </form>
+</div>

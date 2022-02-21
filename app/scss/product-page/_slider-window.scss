@@ -1,5 +1,5 @@
-.slider-window{
-  &__wrapper{
+.slider-window {
+  &__wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,46 +11,121 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    &:target{
+
+    @include r($desktop) {
+      padding: 60px 50px 25px;
+    }
+
+    @include r($lg) {
+      background-color: $white;
+    }
+
+    @include r($sm) {
+      padding: 60px 15px 25px;
+    }
+
+    @include r($phone) {
+      padding: 0;
+    }
+
+    &:target {
       opacity: 1;
       pointer-events: auto;
     }
   }
-  &__close{
+
+  &__close {
     position: absolute;
     z-index: 50;
     top: 90px;
     right: 142px;
+    transition: opacity 0.3s, box-shadow 0.3s, fill 0.3s;
+    border-radius: 3px;
+    line-height: 1;
+
+    @include r($desktop) {
+      top: 75px;
+      right: 75px;
+    }
+
+    @include r($lg) {
+      top: 45px;
+      right: 45px;
+    }
+
+    @include r($sm) {
+      top: 26px;
+      right: 26px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green200;
+    }
+
+    &:hover {
+      fill: $green400;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
   }
-  &__icon{
+
+  &__icon {
     width: 32px;
     height: 32px;
+
+    @include r($desktop) {
+      width: 28px;
+      height: 28px;
+    }
   }
-  &__item{
+
+  &__item {
     background-color: $white;
     border-radius: 15px;
     position: relative;
     padding: 60px 0 160px;
-    @include h($lg-height){
+
+    @include h($lg-height) {
       padding: 0;
       height: calc(100vh - 100px);
     }
+
+    @include r($phone) {
+      padding: 0;
+    }
   }
-  &__box{
+
+  &__box {
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
     height: calc(100vh - 340px);
-    @include h($lg-height){
+
+    @include h($lg-height) {
       height: calc(100vh - 120px);
       padding: 40px 0;
     }
+
+    @include r($phone) {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
   }
-  &__img{
+
+  &__img {
     object-fit: cover;
     height: 100%;
+
+    @include r($phone) {
+      height: 450px;
+    }
   }
-  .slick-dots{
+
+  .slick-dots {
     position: absolute;
     bottom: 92px;
     display: flex;
@@ -58,20 +133,29 @@
     right: 0;
     left: 0;
     font-size: 0;
-    @include h($lg-height){
-      bottom: 5px;
+
+    @include h($lg-height) {
+      bottom: 15px;
     }
-    .slick-active{
+
+    @include h($tablet-height) {
+      bottom: -60px;
+    }
+
+    .slick-active {
       background-color: $green400;
       border-color: $green400;
     }
-    li{
+
+    li {
       border-radius: 50%;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin-right: 10px;
       }
     }
-    button{
+
+    button {
       width: 20px;
       height: 20px;
       border: 1px solid $silver700;
@@ -79,5 +163,24 @@
       border-radius: 50%;
     }
   }
-  
+
+  .btn-slider {
+    transform: translateY(0%);
+  }
+
+  .btn-slider--main-next {
+    right: 35px;
+
+    @include r($desktop) {
+      right: 20px;
+    }
+  }
+
+  .btn-slider--main-prev {
+    left: 35px;
+
+    @include r($desktop) {
+      left: 20px;
+    }
+  }
 }

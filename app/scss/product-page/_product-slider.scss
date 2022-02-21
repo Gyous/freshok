@@ -1,0 +1,74 @@
+.product-slider {
+  max-width: 630px;
+  width: 100%;
+  border: 1px solid $silver600;
+  border-radius: 4px;
+  padding: 65px 0;
+  margin-right: 30px;
+
+  @include r($desktop) {
+    padding: 40px 0;
+    max-width: 900px;
+    margin: 0 auto 30px;
+  }
+
+  @include r($lg) {
+    padding: 25px 0;
+  }
+
+  @include r($phone) {
+    padding: 16px 0;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__img {
+    margin: 0 auto;
+    object-fit: cover;
+
+    @include r($desktop) {
+      width: 100%;
+    }
+
+    @include r($lg) {
+      height: 375px;
+    }
+
+    @include r($tablet) {
+      max-width: 450px;
+      width: 100%;
+    }
+
+    @include r($sm) {
+      max-width: 375px;
+      height: 300px;
+    }
+
+    @include r($phone) {
+      height: 270px;
+      max-width: 270px;
+    }
+  }
+
+  .slick--prev {
+    left: 22px;
+
+    @include r($lg) {
+      left: 14px;
+    }
+  }
+
+  .slick--next {
+    right: 22px;
+
+    @include r($lg) {
+      right: 14px;
+    }
+  }
+}

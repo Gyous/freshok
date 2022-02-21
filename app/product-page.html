@@ -47,22 +47,26 @@
       </ul>
       <ul class="socials">
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-facebook.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-facebook.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в фейсбук</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-youtube.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-youtube.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в ютуб</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-telegram.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-telegram.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в телеграм</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-instagram.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-instagram.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в инстаграм</span>
           </a>
         </li>
@@ -184,10 +188,11 @@
 
           <form class="form-search" action="#">
             <label class="sr-only" for="search">Найти в магазине</label>
-            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..." required>
+            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..."
+              required>
             <label class="sr-only" for="searchadapt"></label>
-            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt" id="searchadapt"
-              placeholder="Я ищу..." required>
+            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt"
+              id="searchadapt" placeholder="Я ищу..." required>
             <button class="btn btn--black" type="button">Поиск</button>
           </form>
           <ul class="navigation">
@@ -217,7 +222,7 @@
               </a>
             </li>
             <li class="navigation__item">
-              <button class="navigation__link" type="button">
+              <button class="navigation__link navigation__link--basket" type="button">
                 <span class="sr-only">Перейти в корзину</span>
                 <svg class="navigation__svg">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
@@ -228,6 +233,140 @@
           </ul>
         </div>
       </div>
+      <div class="basket">
+  <form class="basket__inner" action="#">
+    <div class="basket__top">
+      <div class="basket__left">
+        <h3 class="basket__title">Корзина </h3>
+        <button class="basket__reset" type="reset">очистить корзину</button>
+      </div>
+      <button class="basket__close" type="button">
+        <svg class="basket__icon">
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="basket__list">
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/pineapple.jpg" alt="ананас">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Ананас, 1 кг</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      999<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  1998<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/dragon-fruit.jpg" alt="Питахайя">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Питахайя красная с белой мякотью, 1шт</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      1019<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  2038<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="basket__item">
+        <article class="product-card">
+          <div class="product-card__basket-wrapper">
+            <div class="product-card__basket-top">
+              <a class="product-card__box" href="product-page.html">
+                <img class="product-card__img" width="80" height="60" src="images/products/paprik.jpg" alt="Питахайя">
+              </a>
+              <div class="product-card__inner">
+                <h3 class="product-card__title">
+                  <a class="product-card__name" href="product-page.html">Перец оранжевый, 1кг</a>
+                </h3>
+                <div class="product-card__bottom">
+                  <div class="product-card__prices">
+                    <span class="product-card__price">
+                      349<span>₽</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__counter">
+              <button class="basket__remove" type="button">
+                <svg class="basket__icon">
+                  <use xlink:href="images/sprite.svg#close"></use>
+                </svg>
+              </button>
+              <div class="basket__counter-bottom">
+                <input class="basket__number" type="number" value="1" min="1" name="basket-num" id="basket-num">
+                <span class="basket__counter-sum">
+                  349<span>₽</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <div class="basket__bottom">
+      <label class="basket__summ" for="sum">
+        Товаров на сумму
+        <span class="basket__price">
+          2038<span class="basket__currency">₽</span>
+        </span>
+      </label>
+      <button class="basket__btn" type="button">Оформить заказ</button>
+    </div>
+  </form>
+</div>
     </div>
   </nav>
 </header>
@@ -250,20 +389,24 @@
   <section class="product-page">
     <div class="container">
       <div class="product-page__inner">
+        <h2 class="product-page__title product-page__title--adaptive">Питахайя красная с белой мякотью</h2>
         <ul class="product-slider">
           <li class="product-slider__item">
             <a class="product-slider__link" href="#modalWindow">
-              <img class="product-slider__img" src="images/description/1.jpg" alt="питахайя красная" width="420" height="420">
+              <img class="product-slider__img" src="images/description/1.jpg" alt="питахайя красная" width="420"
+                height="420">
             </a>
           </li>
           <li class="product-slider__item">
             <a class="product-slider__link" href="#modalWindow">
-              <img class="product-slider__img" src="images/description/2.jpg" alt="питахайя красная" width="420" height="420">
+              <img class="product-slider__img" src="images/description/2.jpg" alt="питахайя красная" width="420"
+                height="420">
             </a>
           </li>
           <li class="product-slider__item">
             <a class="product-slider__link" href="#modalWindow">
-              <img class="product-slider__img" src="images/description/3.jpg" alt="питахайя красная" width="420" height="420">
+              <img class="product-slider__img" src="images/description/3.jpg" alt="питахайя красная" width="420"
+                height="420">
             </a>
           </li>
         </ul>
@@ -276,17 +419,20 @@
           <ul class="slider-window">
             <li class="slider-window__item">
               <div class="slider-window__box">
-                <img class="slider-window__img" src="images/description/1.jpg" alt="питахайя красная" width="750" height="750">
+                <img class="slider-window__img" src="images/description/1.jpg" alt="питахайя красная" width="750"
+                  height="750">
               </div>
             </li>
             <li class="slider-window__item">
               <div class="slider-window__box">
-                <img class="slider-window__img" src="images/description/2.jpg" alt="питахайя красная" width="750" height="750">
+                <img class="slider-window__img" src="images/description/2.jpg" alt="питахайя красная" width="750"
+                  height="750">
               </div>
             </li>
             <li class="slider-window__item">
               <div class="slider-window__box">
-                <img class="slider-window__img" src="images/description/3.jpg" alt="питахайя красная" width="750" height="750">
+                <img class="slider-window__img" src="images/description/3.jpg" alt="питахайя красная" width="750"
+                  height="750">
               </div>
             </li>
           </ul>

@@ -32,22 +32,26 @@
       </ul>
       <ul class="socials">
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-facebook.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-facebook.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в фейсбук</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-youtube.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-youtube.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в ютуб</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-telegram.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-telegram.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в телеграм</span>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-instagram.svg');" target="_blank">
+          <a class="socials__link" href="#" style="background-image: url('images/icons/icon-instagram.svg');"
+            target="_blank">
             <span class="sr-only">Перейти в инстаграм</span>
           </a>
         </li>
@@ -169,10 +173,11 @@
 
           <form class="form-search" action="#">
             <label class="sr-only" for="search">Найти в магазине</label>
-            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..." required>
+            <input class="form-search__input" type="search" name="search" id="search" placeholder="Найти в магазине..."
+              required>
             <label class="sr-only" for="searchadapt"></label>
-            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt" id="searchadapt"
-              placeholder="Я ищу..." required>
+            <input class="form-search__input form-search__input--adaptive" type="search" name="searchadapt"
+              id="searchadapt" placeholder="Я ищу..." required>
             <button class="btn btn--black" type="button">Поиск</button>
           </form>
           <ul class="navigation">
@@ -202,7 +207,7 @@
               </a>
             </li>
             <li class="navigation__item">
-              <button class="navigation__link" type="button">
+              <button class="navigation__link navigation__link--basket" type="button">
                 <span class="sr-only">Перейти в корзину</span>
                 <svg class="navigation__svg">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
@@ -213,6 +218,7 @@
           </ul>
         </div>
       </div>
+      @include('_basket.html')
     </div>
   </nav>
 </header>

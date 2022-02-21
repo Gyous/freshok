@@ -16,6 +16,7 @@
 // Header и footer
 @import 'components/header';
 @import 'components/footer';
+@import 'components/basket';
 
 // Общие компоненты
 @import 'components/benefits';
@@ -28,7 +29,6 @@
 @import 'components/pagination';
 @import 'components/reviews';
 @import 'components/offer-slider';
-@import 'components/product-slider';
 
 // Страница каталога
 @import 'shop/shop';
@@ -37,5 +37,7 @@
 
 // Страница описания товара
 @import 'product-page/product-page';
+@import 'product-page/tabs';
 @import 'product-page/opinion-form';
 @import 'product-page/slider-window';
+@import 'product-page/product-slider';

@@ -1,5 +1,8 @@
 .reviews {
   margin-bottom: 44px;
+  @include r($tablet){
+    margin-bottom: 26px;
+  }
 
   &__title {
     font-size: 18px;
@@ -9,15 +12,29 @@
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+    @include r($lg){
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     margin-bottom: 48px;
+    @include r($lg){
+      margin-bottom: 30px;
+    }
+    @include r($sm){
+      margin-bottom: 15px;
+    }
   }
 
   &__item {
     border-bottom: 1px solid $silver600;
-    margin-bottom: 21px;
+    &:not(:last-child){
+      margin-bottom: 21px;
+      @include r($sm){
+        margin-bottom: 28px;
+      }
+    }
   }
 
   &__top {
@@ -25,11 +42,22 @@
     margin-bottom: 26px;
     align-items: center;
     font-size: 14px;
+    @include r($lg){
+      margin-bottom: 18px;
+    }
+    @include r($sm){
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
   }
 
   &__author {
     display: flex;
     align-items: center;
+    @include r($sm){
+      width: 100%;
+      margin-bottom: 12px;
+    }
   }
 
   &__img {
@@ -45,10 +73,17 @@
   &__text {
     p {
       margin-bottom: 24px;
+      @include r($lg){
+        margin-bottom: 18px !important;
+      }
     }
   }
 
   .star {
     margin-left: auto;
+    padding: 0;
+    @include r($sm){
+      margin-left: 0;
+    }
   }
 }
